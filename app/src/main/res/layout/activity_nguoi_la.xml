@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Nguoi_la">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_nguoila"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/Btn_quaylai_nguoila"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/icon_quaylai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/Img_traitim_nguoila"
+        android:layout_width="250dp"
+        android:layout_height="310dp"
+        android:src="@drawable/hinhdongtraitim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_quaylai_nguoila"/>
+
+    <TextView
+        android:id="@+id/Txt_dangtim_nguoila"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ĐANG TÌM KIẾM NGƯỜI ĐỂ GHÉP ĐÔI\nHiện chưa có ai, xin chờ thêm một chút ..."
+        android:textColor="#F44336"
+        android:textSize="10sp"
+        android:layout_marginTop="270dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_quaylai_nguoila"/>
+
+    <TextView
+        android:id="@+id/Txt_giaithich_nguoila"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="HƯỚNG DẪN:\n  Bạn sẽ được ghép đôi ngẫu nghiên với một người cũng đang tìm kiếm người lạ như bạn.
+                        \n  Bạn và họ sẽ chat với nhau trong chế độ ẩn danh. Sau đó, nếu cảm thấy hợp nhau, hai người có thể hiện thông tin nhau biết bằng cách chọn nút KẾT BẠN."
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_nguoila"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

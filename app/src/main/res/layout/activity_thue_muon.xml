@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Thue_muon">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_thuemuon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constra_phantren_thuemuon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Btn_themtinthue_thuemuon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/icon_themcuochen"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_xoatinthue_thuemuon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/icon_xoatinthuemuon"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Txt_themtin_thuemuon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tạo tin"
+            android:textSize="12sp"
+            android:textColor="#FF55C1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_themtinthue_thuemuon" />
+
+        <Button
+            android:id="@+id/Btn_quaylai_thuemuon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/icon_quaylai"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recy_danhsach_thuemuon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_thuemuon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Constra_phantren_thuemuon"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/Linear_thongtin_thuemuon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#B7000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFA7C5"
+            android:padding="5dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <ImageView
+                android:id="@+id/Img_hinh_thuemuon"
+                android:layout_width="180dp"
+                android:layout_height="180dp"/>
+
+            <TextView
+                android:id="@+id/Txt_ten_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Họ và tên"
+                android:layout_marginTop="10dp"
+                android:textColor="#0091A3"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/Txt_canthue_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0091A3" />
+
+            <TextView
+                android:id="@+id/Txt_de_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0091A3" />
+
+            <TextView
+                android:id="@+id/Txt_tai_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0091A3" />
+
+            <TextView
+                android:id="@+id/Txt_gia_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0091A3" />
+
+            <TextView
+                android:id="@+id/Txt_yeucau_thuemuon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0091A3" />
+
+            <Button
+                android:id="@+id/Btn_xemhoso_thuemuon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Xem hồ sơ"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

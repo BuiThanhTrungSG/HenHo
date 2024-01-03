@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tongthe_phongchattinh"
+    tools:context=".Phong_chat_tinh">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recy_noidungchat_phongchattinh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/phansoanthao_phongchattinh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_quaylai_phongchattinh"/>
+
+    <TextView
+        android:id="@+id/Txt_tieude_phongchattinh"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/anhnen_nhantin"
+        android:gravity="center"
+        android:textColor="#A10037"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phansoanthao_phongchattinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/Img_emoji_phongchattinh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:src="@drawable/icon_emoji"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/Edt_khungsoanthao_phongchattinh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/thietke_edittext"
+            android:inputType="textMultiLine"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_gui_phongchattinh"
+            app:layout_constraintStart_toEndOf="@+id/Img_emoji_phongchattinh"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/Btn_gui_phongchattinh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:background="@drawable/icon_guitinhan_nhantin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constran_chontinh_phongchattinh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/Img_anhnenchon_phongchattinh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/nenchontinh"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Banner_phongchattinh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/Txt_chonphongchat_phongchattinh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Chọn phòng chát"
+            android:textColor="#018074"
+            android:textSize="16sp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Spin_chontinh_phongchattinh" />
+
+        <Spinner
+            android:id="@+id/Spin_chontinh_phongchattinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#008505"
+            android:popupBackground="#E7FFE8"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Chọn tỉnh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Btn_vaochat_phongchattinh"/>
+
+        <Button
+            android:id="@+id/Btn_vaochat_phongchattinh"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="#8F01B3A2"
+            app:strokeWidth="2dp"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="Vào phòng"
+            android:textColor="#007483"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/Btn_quaylai_phongchattinh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/icon_quaylai"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

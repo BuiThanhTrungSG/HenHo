@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tao_cuoc_hen">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_taocuochen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_taocuochen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_tieude_taocuochen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anhnen_nhantin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/Btn_quaylai_taocuochen"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/icon_quaylai"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tieudetrang_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="TẠO CUỘC HẸN"
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constran_hendi_taocuochen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEF8FF"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tieude_taocuochen">
+
+                <TextView
+                    android:id="@+id/Txt_hendi_taocuochen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hẹn đi: "
+                    android:textColor="#FF55C1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinner_hendi_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_hendi_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constran_muddich_taocuochen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEF8FF"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Constran_hendi_taocuochen">
+
+                <TextView
+                    android:id="@+id/Txt_muddich_taocuochen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mục đích: "
+                    android:textColor="#FF55C1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinner_muddich_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_muddich_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constran_nguoitratien_taocuochen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEF8FF"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Constran_muddich_taocuochen">
+
+                <TextView
+                    android:id="@+id/Txt_nguoitratien_taocuochen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người trả tiền: "
+                    android:textColor="#FF55C1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinner_nguoitratien_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_nguoitratien_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constran_diadiemhen_taocuochen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEF8FF"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Constran_nguoitratien_taocuochen">
+
+                <TextView
+                    android:id="@+id/Txt_diadiemhen_taocuochen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa điểm hẹn: "
+                    android:textColor="#FF55C1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinner_diadiemhen_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_diadiemhen_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Constran_chiphi_taocuochen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#FEF8FF"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Constran_diadiemhen_taocuochen">
+
+                <TextView
+                    android:id="@+id/Txt_chiphi_taocuochen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chi phí cho cuộc hẹn: "
+                    android:textColor="#FF55C1"
+                    app:layout_constraintBottom_toBottomOf="@+id/Txt_sotien_taocuochen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/Txt_sotien_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_chiphi_taocuochen"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <SeekBar
+                    android:id="@+id/seekBar_chiphi_taocuochen"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:max="500"
+                    android:progress="50"
+                    android:thumb="@drawable/ic_baseline_monetization_on_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Txt_chiphi_taocuochen" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/Btn_taocuochen_taocuochen"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TẠO CUỘC HẸN"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Constran_chiphi_taocuochen" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="CHÚ Ý:\n  Cuộc hẹn của bạn sẽ bị tự động xóa sau 12 giờ đêm."
+                android:textColor="#009688"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Btn_taocuochen_taocuochen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

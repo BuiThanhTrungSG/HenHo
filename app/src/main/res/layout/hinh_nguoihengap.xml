@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Constran_hinhhengap"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nen_hengap"
+        app:layout_constraintBottom_toBottomOf="@+id/Constran_hinhhengap"
+        app:layout_constraintEnd_toEndOf="@+id/Constran_hinhhengap"
+        app:layout_constraintStart_toStartOf="@+id/Constran_hinhhengap"
+        app:layout_constraintTop_toTopOf="@+id/Constran_hinhhengap" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nen_hengap2"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/Txt_hengi_hinhhengap"
+        app:layout_constraintEnd_toEndOf="@+id/Txt_hengi_hinhhengap"
+        app:layout_constraintBottom_toBottomOf="@+id/Txt_hengi_hinhhengap"
+        app:layout_constraintTop_toTopOf="@+id/Txt_hengi_hinhhengap"/>
+
+    <TextView
+        android:id="@+id/Txt_hengi_hinhhengap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="8sp"
+        android:paddingTop="2dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="2dp"
+        android:paddingStart="12dp"
+        android:textStyle="bold"
+        android:textColor="#00BCD4"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/Constran_nen_hinhhengap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_hengi_hinhhengap">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview_avata_hinhhengap"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:id="@+id/Img_avata_hinhhengap"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginLeft="-7dp"
+                android:layout_marginTop="-7dp"
+                app:layout_constraintCircleRadius="25dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Img_sao_hinhhengap"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icon_sao1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Constran_nen_hinhhengap"/>
+
+    <TextView
+        android:id="@+id/Txt_ten_hinhhengap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Tên"
+        android:textColor="#FFE500"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_sao_hinhhengap" />
+
+    <ImageView
+        android:id="@+id/Img_gioitinh_hinhhengap"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_nu"
+        app:layout_constraintStart_toStartOf="@+id/Constran_nen_hinhhengap"
+        app:layout_constraintTop_toTopOf="@+id/Constran_nen_hinhhengap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

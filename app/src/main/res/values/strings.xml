@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bạn Muốn Hẹn Hò</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="khachvanglai">Khách vãng lai</string>
+
+    <string name="id_banner">a073aa6083121d77</string>
+    <string name="id_toanmanhinh">d2cd3df48bb77d20</string>
+    <string name="id_video_thuong">fab3004cc6effd91</string>
+
+<!--    <string name="id_banner">11111111111</string>-->
+<!--    <string name="id_toanmanhinh">2222222222222</string>-->
+<!--    <string name="id_video_thuong">3333333333333333</string>-->
+
+</resources>

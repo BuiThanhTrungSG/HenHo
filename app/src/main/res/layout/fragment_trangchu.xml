@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/Layuotphu1_timkiem_trangchu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="TÌM KIẾM THÀNH VIÊN"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="@drawable/anhnen_nhantin"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_timkiem_trangchu">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_timkiem_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="4"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#009688"
+                    android:layout_marginBottom="5dp"
+                    android:text="Giới tính" />
+
+                <Spinner
+                    android:id="@+id/spinner_gioitinh_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/thietke_edittext" />
+
+                <TextView
+                    android:id="@+id/textViewDANGCAP_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#009688"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="Đẳng cấp" />
+
+                <Spinner
+                    android:id="@+id/spinner_dangcap_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/thietke_edittext" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2_timkiem_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="6"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/textView2_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#009688"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Nơi ở" />
+
+                <Spinner
+                    android:id="@+id/spinner_noio_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/thietke_edittext" />
+
+                <TextView
+                    android:id="@+id/textView5_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#009688"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Mục đích tham gia" />
+
+                <Spinner
+                    android:id="@+id/muctieu_timkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/thietke_edittext" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Btn_timkiemthanhvien_trangchu"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:text="TÌM KIẾM" />
+
+        <Button
+            android:id="@+id/Btn_huytimkiemthanhvien_trangchu"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            android:text="HỦY TÌM KIẾM"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="#8F01B3A2"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/nen_tieude_trangchu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nen_tieude"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/Txt_danhsachthanhvien_trangchu"/>
+
+    <TextView
+        android:id="@+id/Txt_danhsachthanhvien_trangchu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="#BF553200"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ds_menu_trangchu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_danhsachthanhvien_trangchu">
+
+        <LinearLayout
+            android:id="@+id/ds_menutrong1_trangchu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="16"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/menu1_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_timkiem_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_timkiem"
+                    android:textColor="#009688" />
+
+                <TextView
+                    android:id="@+id/textView_tttimkiem_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tìm Kiếm"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu3_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_timquanhday_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_timquanhday" />
+
+                <TextView
+                    android:id="@+id/textView_timquanhday_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quanh Đây"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu6_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_phongchat_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_phongchat" />
+
+                <TextView
+                    android:id="@+id/textView_phongchat_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phòng Chát"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu4_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_boitinhyeu_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_boitinhyeu" />
+
+                <TextView
+                    android:id="@+id/textView_boitinhyeu_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hợp Tuổi"
+                    android:layout_gravity="center"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ds_menutrong2_trangchu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="16"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/menu7_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_nguoila_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_nguoila" />
+
+                <TextView
+                    android:id="@+id/textView_nguoila_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Người Lạ"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu8_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_thuemuon_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_thuemuon" />
+
+                <TextView
+                    android:id="@+id/textView_thuemuon_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thuê Mướn"
+                    android:layout_gravity="center"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu2_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_hengap_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_moimoc" />
+
+                <TextView
+                    android:id="@+id/textView_hengap_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mời Mọc"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu5_trangchu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/Btn_tangvang_trangchu"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:background="@drawable/icon_thoivang" />
+
+                <TextView
+                    android:id="@+id/textView_tangvang_trangchu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lấy vàng"
+                    android:textColor="#009688"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Btn_quaylai_trangchu"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/icon_quaylai"
+        android:visibility="invisible"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_danhsachmoidangnhap_fragment_trangchu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ds_menu_trangchu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constran_quangcao"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#19000000"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Btn_dong_quangcao"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="90dp"
+            android:layout_height="31dp"
+            android:background="#000000"
+            android:textSize="11sp"
+            android:text="Đóng X"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="@+id/Img_anh_quangcao"
+            app:layout_constraintBottom_toTopOf="@+id/Img_anh_quangcao"/>
+
+        <ImageView
+            android:id="@+id/Img_anh_quangcao"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="70dp"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:background="#19000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

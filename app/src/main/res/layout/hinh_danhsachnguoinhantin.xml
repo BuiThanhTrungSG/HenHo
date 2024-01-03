@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nendanhsachtinnhan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="10dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:paddingTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        android:id="@+id/checkb_tinnhan"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="137dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/nguoigui_tinnhan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="15sp"
+        android:layout_marginTop="2dp"
+        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cardview_avata_tinnhan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dangcap_tinnhan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#4CAF50"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cardview_avata_tinnhan"
+        app:layout_constraintTop_toBottomOf="@+id/nguoigui_tinnhan" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cardview_avata_tinnhan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="25dp"
+        android:layout_marginStart="5dp"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/avata_tinnhan"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="-7dp"
+        android:layout_marginLeft="-7dp"
+        app:layout_constraintCircleRadius="25dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/line_dsdn"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="13dp"
+        android:background="#FDB8F6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Cardview_avata_tinnhan"
+        app:layout_constraintTop_toBottomOf="@+id/dangcap_tinnhan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

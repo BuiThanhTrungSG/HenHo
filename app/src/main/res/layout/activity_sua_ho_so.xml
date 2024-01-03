@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sua_ho_so">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_suahoso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_suahoso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tieude_suahoso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="TỜ KHAI SỬA HỒ SƠ"
+                android:textColor="#FD7AF0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/ten_suahoso"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Tên của bạn"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tieude_suahoso" />
+
+
+            <EditText
+                android:id="@+id/nghenghiep_suahoso"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Nghề nghệp của bạn"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ten_suahoso" />
+
+            <LinearLayout
+                android:id="@+id/Linear_phansuahoso"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nghenghiep_suahoso">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutsuahoso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chọn năm sinh" />
+
+                    <Spinner
+                        android:id="@+id/namsinh_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext"
+                        android:ems="10"
+                        android:hint="Năm sinh"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:id="@+id/textViewsuahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn giới tính" />
+
+                    <Spinner
+                        android:id="@+id/spinner_gioitinh_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView3suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn trình độ" />
+
+                    <Spinner
+                        android:id="@+id/spinner_trinhdo_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2suahoso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chọn nơi ở" />
+
+                    <Spinner
+                        android:id="@+id/spinner_noio_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView4suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn tình trạng hôn nhân" />
+
+                    <Spinner
+                        android:id="@+id/spinner_tinhtranghonnhan_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView5suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn mục đích tham gia" />
+
+                    <Spinner
+                        android:id="@+id/muctieu_suahoso"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Layout_gioithieu_suahoso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:weightSum="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Linear_phansuahoso">
+
+                <EditText
+                    android:id="@+id/Edt_gioithieu_suahoso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/thietke_edittext"
+                    android:gravity="top"
+                    android:hint=" Giới thiệu về bạn \n (Mình biết là khó, nhưng ráng ghi nhiều nhiều chút nha, mọi người sẽ quan tâm đến bạn hơn đó)"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Linear_phansuahoso" />
+
+                <EditText
+                    android:id="@+id/Edt_timnguoithenao_suahoso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/thietke_edittext"
+                    android:gravity="top"
+                    android:hint=" Bạn đang muốn tìm người như thế nào?\n (Thông tin này quan trọng nè)"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Edt_gioithieu_suahoso" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/nutluulai_suahoso"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lưu lại"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Layout_gioithieu_suahoso" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

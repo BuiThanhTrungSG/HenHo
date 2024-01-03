@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Img_anh_nguoicauhon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_ten_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="#0492A5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_anh_nguoicauhon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_dangcap_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_anh_nguoicauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_ten_nguoicauhon" />
+
+    <TextView
+        android:id="@+id/Txt_sinhle_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_anh_nguoicauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_dangcap_nguoicauhon" />
+
+    <TextView
+        android:id="@+id/Txt_loicauhon_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_anh_nguoicauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_sinhle_nguoicauhon" />
+
+    <TextView
+        android:id="@+id/Txt_line_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#EDFA8080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_anh_nguoicauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_loicauhon_nguoicauhon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

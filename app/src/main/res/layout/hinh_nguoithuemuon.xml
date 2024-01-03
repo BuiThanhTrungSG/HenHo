@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nen_thuemuon"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="@+id/tong_hinhnguoithuemuon"
+        app:layout_constraintBottom_toBottomOf="@+id/tong_hinhnguoithuemuon"
+        app:layout_constraintEnd_toEndOf="@+id/tong_hinhnguoithuemuon"
+        app:layout_constraintStart_toStartOf="@+id/tong_hinhnguoithuemuon"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tong_hinhnguoithuemuon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Txt_canthue_hinhnguoithuemuon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#008D9F"
+            android:background="#FBFBFB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview_avata_hinhnguoithuemuon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt_canthue_hinhnguoithuemuon">
+
+            <ImageView
+                android:id="@+id/Img_avata_hinhnguoithuemuon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="-10dp"
+                app:layout_constraintCircleRadius="25dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/Img_sao_hinhnguoithuemuon"
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:src="@drawable/icon_sao1"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Cardview_avata_hinhnguoithuemuon"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

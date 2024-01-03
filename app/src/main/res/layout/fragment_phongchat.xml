@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tongthe_phongchat"
+    tools:context=".Fragment.Fragment_phongchat">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recy_noidungchat_phongchat"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/phansoanthao_phongchat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/Txt_tieude_phongchat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:padding="8dp"
+                android:background="@drawable/anhnen_nhantin"
+                android:text="PHÒNG CHÁT CỘNG ĐỒNG"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phansoanthao_phongchat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/Img_emoji_phongchat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:src="@drawable/icon_emoji"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/Edt_khungsoanthao_phongchat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thietke_edittext"
+                android:inputType="textMultiLine"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Btn_gui_phongchat"
+                app:layout_constraintStart_toEndOf="@+id/Img_emoji_phongchat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Btn_gui_phongchat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:background="@drawable/icon_guitinhan_nhantin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

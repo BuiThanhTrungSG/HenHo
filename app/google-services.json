@@ -1,0 +1,200 @@
+{
+  "project_info": {
+    "project_number": "950456296909",
+    "firebase_url": "https://banmuonhh-a42dd.firebaseio.com",
+    "project_id": "banmuonhh-a42dd",
+    "storage_bucket": "banmuonhh-a42dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950456296909:android:ef7a2d50eba5b73cf01084",
+        "android_client_info": {
+          "package_name": "com.example.banmuonhenho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2Y7z_t88E2969d35-tkJy6WOc1dIOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "950456296909-75liti6ppvlsmdr02d8ojv7l94cg8m10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hava.banmuonhenho"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950456296909:android:9372e97b9057c56bf01084",
+        "android_client_info": {
+          "package_name": "com.example.bmhh_duyet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2Y7z_t88E2969d35-tkJy6WOc1dIOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "950456296909-75liti6ppvlsmdr02d8ojv7l94cg8m10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hava.banmuonhenho"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950456296909:android:f05c3a5fe18a0866f01084",
+        "android_client_info": {
+          "package_name": "com.henho.banmuonhenho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2Y7z_t88E2969d35-tkJy6WOc1dIOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "950456296909-75liti6ppvlsmdr02d8ojv7l94cg8m10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hava.banmuonhenho"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950456296909:android:8bec376523107b96f01084",
+        "android_client_info": {
+          "package_name": "com.lovecompany.banmuonhenho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950456296909-mo56ee51lu9sgnm7erkt0kbu7k9pfiii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lovecompany.banmuonhenho",
+            "certificate_hash": "baf364e39868f3be5339326a974eee7959e7822f"
+          }
+        },
+        {
+          "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2Y7z_t88E2969d35-tkJy6WOc1dIOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "950456296909-75liti6ppvlsmdr02d8ojv7l94cg8m10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hava.banmuonhenho"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8602312100792832~7932590091"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950456296909:android:d5149361b989d141f01084",
+        "android_client_info": {
+          "package_name": "com.lovecompany.bmhh_kr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo2Y7z_t88E2969d35-tkJy6WOc1dIOGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950456296909-bmnl62v2rira8jme07pb6h1lpv23nqlc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "950456296909-75liti6ppvlsmdr02d8ojv7l94cg8m10.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hava.banmuonhenho"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

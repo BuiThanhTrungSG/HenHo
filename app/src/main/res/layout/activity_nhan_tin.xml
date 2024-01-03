@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/tongthe_nhantin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Layout_dadangnhap_nhantin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Nhan_tin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_tieude_nhantin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/anhnen_nhantin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/Btn_quaylai_nhantin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_quaylai"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Cardview_anh_nhantin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_nhantin"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/Img_xemhoso_nhantin"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="-7dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintCircleRadius="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tieude_nhantin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Tên người chát"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/Btn_lock_nhantin"
+                app:layout_constraintStart_toEndOf="@+id/Cardview_anh_nhantin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tieude_dangcap_nhantin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Đẳng cấp"
+                android:textColor="#ffff"
+                app:layout_constraintStart_toEndOf="@+id/Cardview_anh_nhantin"
+                app:layout_constraintTop_toBottomOf="@+id/tieude_nhantin" />
+
+            <ImageView
+                android:id="@+id/Btn_xoa_nhantin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/icon_xoa_tinnhan"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Btn_lock_nhantin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/lock"
+                android:clickable="true"
+                android:tag="mo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Btn_xoa_nhantin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toanbotinnhan_nhantin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/Constran_khungnhap_nhantin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Constran_khungnhap_nhantin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/Img_emoji_nhantin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:src="@drawable/icon_emoji"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Img_guianh_nhantin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:src="@drawable/icon_guianh"
+                app:layout_constraintStart_toEndOf="@+id/Img_emoji_nhantin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/noidungtinnhan_nhantin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/thietke_edittext"
+                android:hint="Nhập tin nhắn"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/gui_nhantin"
+                app:layout_constraintStart_toEndOf="@+id/Img_guianh_nhantin"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/gui_nhantin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/icon_guitinhan_nhantin"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/Img_anhnguoinhan_nhantin"
+            android:layout_width="53dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="35dp"
+            android:background="#DBF4FF"
+            android:paddingStart="3dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="3dp"
+            android:paddingBottom="3dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+        <ImageView
+            android:id="@+id/Img_anhnguoinhankhung_nhantin"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/kep_ghim"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+        <ImageView
+            android:id="@+id/Img_anhnguoigui_nhantin"
+            android:layout_width="53dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="35dp"
+            android:background="#DBF4FF"
+            android:paddingStart="3dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="3dp"
+            android:paddingBottom="3dp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Img_anhnguoinhankhung_nhantin"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+
+        <ImageView
+            android:id="@+id/Img_anhnguoiguikhung_nhantin"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/kep_ghim"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Img_anhnguoinhankhung_nhantin"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+        <ImageView
+            android:id="@+id/Img_xemanhlon_nhantin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/Constran_khungnhap_nhantin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nhantin" />
+
+        <Button
+            android:id="@+id/Btn_xoaanhgui_nhantin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÓA"
+            android:textColor="#000000"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/Img_xemanhlon_nhantin"
+            app:layout_constraintTop_toTopOf="@+id/Img_xemanhlon_nhantin" />
+
+        <Button
+            android:id="@+id/Btn_xoaanhnhan_nhantin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XÓA"
+            android:textColor="#000000"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/Img_xemanhlon_nhantin"
+            app:layout_constraintTop_toTopOf="@+id/Img_xemanhlon_nhantin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout_chuadangnhap_nhantin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Để nhắn tin với mọi người, vui lòng:" />
+
+        <Button
+            android:id="@+id/Btn_dangnhap_nhantin"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:textColor="#ffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="Hoặc" />
+
+        <Button
+            android:id="@+id/Btn_dangky_nhantin"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:textColor="#009688"
+            app:strokeColor="#8F01B3A2"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/BottomNavigationView_trangchu"
+        app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView_trangchu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView_trangchu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F5F6"
+        app:itemIconTint="@color/chonmaumenu"
+        app:itemRippleColor="#ff00"
+        app:itemTextColor="@color/chonmaumenu"
+        app:layout_anchorGravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottomnavigation_menu" />
+
+<!--    <com.applovin.mediation.ads.MaxAdView-->
+<!--        android:id="@+id/baner_thunghiem"-->
+<!--        xmlns:maxads="https://schemas.applovin.com/android/1.0"-->
+<!--        maxads:adUnitId="3b6cc76f70fdcbb4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/banner_height_min"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

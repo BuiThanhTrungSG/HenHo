@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quen_mat_khau">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_quenmatkhau"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_quenmatkhau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo_quenmatkhau"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tieude_laylaimatkhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="LẤY LẠI MẬT KHẨU"
+                android:textColor="#FF55C1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo_quenmatkhau" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Nhập email trước đây bạn dùng đăng ký tài khoản. \nChúng tôi sẽ gửi lại mật khẩu cho bạn vào email này"
+                android:textColor="#FF55C1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tieude_laylaimatkhau" />
+
+            <EditText
+                android:id="@+id/email_quenmatkhau"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Nhập email của bạn"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#5BFF009F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <Button
+                android:id="@+id/nutquenmatkhau"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Gửi lại mật khẩu"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_quenmatkhau" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

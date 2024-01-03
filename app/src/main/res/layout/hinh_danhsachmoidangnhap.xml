@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="3dp"
+    android:background="@drawable/nen_thanhvienmoidangnhap"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tuoi_dsdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FAAAC9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_icontuoi_dsdn" />
+
+    <ImageView
+        android:id="@+id/Img_icontuoi_dsdn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/avata_dsdn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Img_sao_dsdn"
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:src="@drawable/icon_sao1"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avata_dsdn"/>
+
+    <TextView
+        android:id="@+id/dangcap_dsdn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#4CAF50"
+        android:paddingBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_sao_dsdn" />
+
+    <TextView
+        android:id="@+id/ten_dsdn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingStart="25dp"
+        android:textStyle="bold"
+        android:textColor="#73D600"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gioitinh_dsdn"
+        app:layout_constraintStart_toEndOf="@+id/avata_dsdn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gioitinh_dsdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textSize="12sp"
+        android:textColor="#EC7CFF"
+        app:layout_constraintEnd_toStartOf="@+id/Img_icontuoi_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/Img_icongioitinh_dsdn"/>
+
+    <ImageView
+        android:id="@+id/Img_icongioitinh_dsdn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/Img_icontuoi_dsdn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/icon_nghenghiep_dsdn"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/icon_nghenghiep"
+        app:layout_constraintStart_toEndOf="@+id/avata_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/muctieu_dsdn" />
+
+    <TextView
+        android:id="@+id/nghenghiep_dsdn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#19857C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon_nghenghiep_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/muctieu_dsdn" />
+
+    <ImageView
+        android:id="@+id/icontraitim_dsdn"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/icon_traitim"
+        app:layout_constraintStart_toEndOf="@+id/avata_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/ten_dsdn" />
+
+    <TextView
+        android:id="@+id/muctieu_dsdn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="3dp"
+        android:textColor="#19857C"
+        app:layout_constraintEnd_toStartOf="@+id/Img_icongioitinh_dsdn"
+        app:layout_constraintStart_toEndOf="@+id/icontraitim_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/ten_dsdn" />
+
+    <TextView
+        android:id="@+id/gioithieu_dsdn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textColor="#19857C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avata_dsdn"
+        app:layout_constraintTop_toBottomOf="@+id/nghenghiep_dsdn" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/line_dsdn"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:background="#FDE7FA"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/avata_dsdn"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/gioithieu_dsdn" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

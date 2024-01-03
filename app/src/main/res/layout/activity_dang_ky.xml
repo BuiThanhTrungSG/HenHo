@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dang_ky">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nutdangky"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="TỜ KHAI ĐĂNG KÝ THÀNH VIÊN"
+                android:textColor="#FD7AF0"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/email_dangky"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Email đăng nhập"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+            <EditText
+                android:id="@+id/matkhau_dangky"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Mật khẩu đăng nhập"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_dangky" />
+
+            <EditText
+                android:id="@+id/ten_dangky"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Tên của bạn"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/matkhau_dangky" />
+
+
+            <EditText
+                android:id="@+id/nghenghiep_dangky"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Nghề nghiệp"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ten_dangky" />
+
+            <LinearLayout
+                android:id="@+id/Linear_phandangky"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nghenghiep_dangky">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chọn năm sinh" />
+
+                    <Spinner
+                        android:id="@+id/namsinh_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext"
+                        android:ems="10"
+                        android:hint="Năm sinh"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn giới tính" />
+
+                    <Spinner
+                        android:id="@+id/spinner_gioitinh_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn trình độ" />
+
+                    <Spinner
+                        android:id="@+id/spinner_trinhdo_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Chọn nơi ở" />
+
+                    <Spinner
+                        android:id="@+id/spinner_noio_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn tình trạng hôn nhân" />
+
+                    <Spinner
+                        android:id="@+id/spinner_tinhtranghonnhan_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Chọn mục đích tham gia" />
+
+                    <Spinner
+                        android:id="@+id/muctieu_dangky"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/thietke_edittext"
+                        app:layout_constraintStart_toEndOf="@+id/nghenghiep_dangky" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Edt_gioithieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:gravity="top"
+                android:hint=" Giới thiệu về bạn \n (Mình biết là khó, nhưng ráng ghi nhiều nhiều chút nha, mọi người sẽ quan tâm đến bạn hơn đó)"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Linear_phandangky" />
+
+            <EditText
+                android:id="@+id/Edt_timnguoithenao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:gravity="top"
+                android:hint=" Bạn đang muốn tìm người như thế nào?\n (Thông tin này quan trọng nè)"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_gioithieu" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nutdangky"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Img_hinh_nguoiduoccauhon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_ten_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#0492A5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Txt_dangcap_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_ten_nguoiduoccauhon" />
+
+    <TextView
+        android:id="@+id/Txt_loicauhon_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_dangcap_nguoiduoccauhon" />
+
+    <TextView
+        android:id="@+id/Txt_sinhle_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_loicauhon_nguoiduoccauhon" />
+
+    <TextView
+        android:id="@+id/Txt_ngaygui_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_sinhle_nguoiduoccauhon" />
+
+    <TextView
+        android:id="@+id/Txt_line_nguoiduoccauhon"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#B50485EC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Img_hinh_nguoiduoccauhon"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_ngaygui_nguoiduoccauhon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nguoi_cau_hon">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_nguoicauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tieude_nguoicauhon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/anhnen_nhantin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Btn_quaylai_nguoicauhon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/icon_quaylai"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tieudetrang_nguoicauhon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="NGƯỜI THÍCH"
+            android:textColor="#ffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_nguoicauhon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Txt_tieude_nguoicauhon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="10 người tặng nhiều vàng nhất cho "
+        android:textColor="#009688"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nguoicauhon" />
+
+    <TextView
+        android:id="@+id/Txt_nguoiduoccauhon_nguoicauhon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tên"
+        android:textColor="#0492A5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/Txt_tieude_nguoicauhon"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tieude_nguoicauhon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recy_danhsachnguoicauhon_nguoicauhon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_nguoicauhon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_nguoiduoccauhon_nguoicauhon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

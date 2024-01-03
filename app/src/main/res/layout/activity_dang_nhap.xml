@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dang_nhap">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_dangnhap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_dangnhap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="#FF55C1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/Btn_Google_dangnhap"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/google_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/Txt_khongcandangky_dangnhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(không cần đăng ký)\nhoặc"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Btn_Google_dangnhap" />
+
+            <ImageView
+                android:id="@+id/Btn_Email_dangnhap"
+                android:layout_width="280dp"
+                android:layout_height="60dp"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/email_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_khongcandangky_dangnhap" />
+
+            <LinearLayout
+                android:id="@+id/Linear_emailkhac_dangnhap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Btn_Email_dangnhap">
+
+                <EditText
+                    android:id="@+id/email_dangnhap"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="60dp"
+                    android:background="@drawable/thietke_edittext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Email đăng nhập"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <EditText
+                    android:id="@+id/matkhau_dangnhap"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:background="@drawable/thietke_edittext"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Mật khẩu"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/email_dangnhap" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_laumatkhau_dangnhap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:checked="true"
+                    android:text="Lưu mật khẩu"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/matkhau_dangnhap"
+                    tools:layout_editor_absoluteX="167dp"
+                    tools:layout_editor_absoluteY="482dp" />
+
+                <Button
+                    android:id="@+id/nutdangnhap"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="ĐĂNG NHẬP"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_laumatkhau_dangnhap" />
+
+                <Button
+                    android:id="@+id/nutdangky"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Đăng ký"
+                    android:textColor="#009688"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nutdangnhap"
+                    app:strokeColor="#8F01B3A2"
+                    app:strokeWidth="2dp" />
+
+                <Button
+                    android:id="@+id/nutquenmatkhau"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Quên mật khẩu"
+                    android:textColor="#009688"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nutdangky"
+                    app:strokeColor="#8F01B3A2"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox_dieukhoan_dangnhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="Tôi đồng ý với các điều khoản"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Linear_emailkhac_dangnhap"
+                tools:layout_editor_absoluteX="167dp"
+                tools:layout_editor_absoluteY="482dp" />
+
+            <TextView
+                android:id="@+id/Txt_noidungdieukhoan_dangnhap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Điều khoản tham gia Bạn Muốn Hẹn Hò"
+                android:textColor="#007EE3"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_dieukhoan_dangnhap" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

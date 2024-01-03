@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tang_dang_cap">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_dangcap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tieude_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/anhnen_nhantin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Btn_quaylai_dangcap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/icon_quaylai"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tieudetrang_dangcap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="ĐẲNG CẤP"
+            android:textColor="#ffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_dangcap"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tieude_dangcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Giới thiệu"
+        android:textSize="18sp"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tieude_dangcap"/>
+
+    <TextView
+        android:id="@+id/huongdan1_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:text="Ở đẳng cấp cao bạn sẽ được ưu tiên xuất hiện ở vị trí nổi bật, gây ấn tượng và tạo sự tin cậy. Có 4 đẳng cấp:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tieude_dangcap"/>
+
+    <TextView
+        android:id="@+id/Txt_binhdan_dangcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Bình dân"
+        android:textColor="#4CAF50"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/huongdan1_dangcap" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" có dưới 100 thỏi vàng."
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Txt_binhdan_dangcap"
+        app:layout_constraintTop_toBottomOf="@+id/huongdan1_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_khagia_dangcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Khá giả"
+        android:textColor="#04B1FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_binhdan_dangcap" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" có 100 thỏi vàng đến 300 thỏi vàng."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Txt_khagia_dangcap"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_binhdan_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_giauco_dangcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Giàu có"
+        android:textColor="#F4F000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_khagia_dangcap" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" có trên 300 thỏi vàng đến 1000 thỏi vàng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Txt_giauco_dangcap"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_khagia_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_daigia_dangcap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Đại gia"
+        android:textStyle="bold"
+        android:textColor="#E91E63"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_giauco_dangcap"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" có trên 1000 thỏi vàng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Txt_daigia_dangcap"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_giauco_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_sothoivang_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Hiện nay bạn đang có 0 thỏi vàng nên ở đẳng cấp Bình dân"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_daigia_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_dangcap_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Nên thuộc tầng lớp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_sothoivang_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_loimoimuavaqng_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Nhận vàng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_dangcap_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_1_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Hoặc xem quảng cáo để nhận vàng miễn phí"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_loimoimuavaqng_dangcap" />
+
+    <TextView
+        android:id="@+id/Txt_2_dangcap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="(1 thỏi vàng/1 lần xem - xuất hiện ngẫu nhiên)"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_1_dangcap" />
+
+    <Button
+        android:id="@+id/Btn_quangcao_dangcap"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="#8F01B3A2"
+        app:strokeWidth="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:text="XEM QUẢNG CÁO"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_2_dangcap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

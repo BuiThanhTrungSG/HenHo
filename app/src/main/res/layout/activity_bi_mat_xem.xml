@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bi_mat_xem">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_bimatxem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/Txt_tieude_bimatxem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ẢNH BÍ MẬT"
+        android:textColor="#00BCD4"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_quaylai_bimatxem"/>
+
+    <LinearLayout
+        android:id="@+id/Linear_khunganh_bimatxem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_bimatxem"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_tieude_bimatxem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh1_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/nen_bimat2"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh2_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/nen_bimat2"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh3_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/nen_bimat2"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh4_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nen_bimat2"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh5_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/nen_bimat2"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Img_anh6_bimatxem"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/nen_bimat2"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/nen_bimat"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constran_dapnhap_bimatxem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Img_quaylai_bimatxem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/Txt_matkhau_bimatxem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="NHẬP MẬT KHẨU\nNếu không biết thì nhắn tin hỏi bạn ấy nhé!"
+            android:textStyle="bold"
+            android:textColor="#00BCD4"
+            android:textSize="15sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Edt_matkhau_bimatxem"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#F44336"
+            android:gravity="center"
+            android:background="#EEE5FF"
+            android:padding="5dp"
+            android:inputType="number"
+            android:maxLength="2"
+            android:hint="00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Txt_matkhau_bimatxem"/>
+
+        <Button
+            android:id="@+id/Btn_mokhoa_bimatxem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mở khóa"
+            android:backgroundTint="#00BCD4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Edt_matkhau_bimatxem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/Img_quaylai_bimatxem"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_quaylai"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/Linear_xemanh_bimatxem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#A6000000"
+        android:padding="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_bimatxem"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/Img_xemanh_bimatxem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/nen_hengap" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hen_gap">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_hengap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tieude_hengap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/anhnen_nhantin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Btn_quaylai_hengap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/icon_quaylai"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tieudetrang_hengap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="HẸN GẶP"
+            android:textColor="#ffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_hengap"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Constran_phantren_hengap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_tieude_hengap">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Constran_phantrentrai_henhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/Btn_taocuochen_hengap"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/icon_themcuochen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Txt_taocuochen_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TẠO CUỘC HẸN"
+                android:textColor="#950133"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Btn_taocuochen_hengap" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/Txt_loichao_hengap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:text="Hãy tạo một cuộc hẹn để gặp gỡ mọi người ngoài đời thực nhé"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textColor="#9C27B0"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Constran_phantrentrai_henhap"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Constran_phantrenphai_henhap"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Constran_phantrentrai_henhap"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/Txt_hengi_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hẹn gì?"
+                android:textColor="#009688"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Txt_1_hengap"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/Txt_mucdich_hegap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mục đích"
+                android:textColor="#009688"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Txt_2_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_hengi_hengap" />
+
+            <TextView
+                android:id="@+id/Txt_sotien_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Số tiền"
+                android:textColor="#009688"
+                app:layout_constraintStart_toEndOf="@+id/Txt_3_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_mucdich_hegap" />
+
+            <TextView
+                android:id="@+id/Txt_nguoitratien_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Người trả tiền"
+                android:textColor="#009688"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Txt_4_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_sotien_hengap" />
+
+            <TextView
+                android:id="@+id/Txt_diadiem_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Địa điểm mời"
+                android:textColor="#009688"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Txt_5_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_mucdich_hegap" />
+
+            <TextView
+                android:id="@+id/Txt_1_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã đăng ký hẹn đi: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/Txt_2_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Để: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_hengi_hengap"/>
+
+            <TextView
+                android:id="@+id/Txt_3_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chi phí: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_mucdich_hegap"/>
+
+            <TextView
+                android:id="@+id/Txt_4_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_sotien_hengap"/>
+
+            <TextView
+                android:id="@+id/Txt_5_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" tại: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toEndOf="@+id/Txt_sotien_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_mucdich_hegap"/>
+
+            <TextView
+                android:id="@+id/Txt_6_hengap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số người đã nhận lời mời của bạn: "
+                android:textStyle="bold"
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_nguoitratien_hengap"/>
+
+            <TextView
+                android:id="@+id/Txt_songuoinhanloi_hengap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#F44336"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Txt_6_hengap"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_nguoitratien_hengap" />
+
+            <Button
+                android:id="@+id/Btn_danhsachnhanloi_hengap"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:text="Danh sách"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_6_hengap"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/Btn_xoacuochen_hengap"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="XÓA CUỘC HẸN"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_6_hengap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Btn_danhsachnhanloi_hengap" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recyc_danhsachhen_hengap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_hengap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Constran_phantren_hengap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="khoangcachcaro">2dp</dimen>
+    <dimen name="banner_height_min">50dp</dimen>
+    <dimen name="banner_height_max">90dp</dimen>
+
+</resources>

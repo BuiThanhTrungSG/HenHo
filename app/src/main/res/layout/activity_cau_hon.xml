@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cau_hon">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Banner_cauhon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Banner_cauhon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_tieude_cauhon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anhnen_nhantin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/Btn_quaylai_cauhon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/icon_quaylai"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tieude_cauhon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="LIKE"
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/Btn_quaylai_cauhon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="BẠN THÍCH:"
+                android:textColor="#009688"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tieude_cauhon" />
+
+            <ImageView
+                android:id="@+id/Img_anhnguoiduoccauhon_cauhon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tieude_cauhon" />
+
+            <TextView
+                android:id="@+id/Txt_tennguoiduoccauhon_cauhon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Tên"
+                android:textColor="#0492A5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/Txt_dangcapnguoiduoccauhon_cauhon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Bình dân"
+                android:textColor="#4CAF50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_tennguoiduoccauhon_cauhon" />
+
+            <EditText
+                android:id="@+id/Edt_loicauhon_cauhon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:hint="Lời nhắn"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:textColorHint="#5BFF009F"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Img_anhnguoiduoccauhon_cauhon" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Gửi tặng "
+                android:textColor="#009688"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_loicauhon_cauhon" />
+
+            <EditText
+                android:id="@+id/Edt_sothoivang_cauhon"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/thietke_edittext"
+                android:gravity="center"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:text="0"
+                android:textColor="#E91E63"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_loicauhon_cauhon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="thỏi vàng"
+                android:textColor="#009688"
+                app:layout_constraintStart_toEndOf="@+id/Edt_sothoivang_cauhon"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_loicauhon_cauhon" />
+
+            <TextView
+                android:id="@+id/Txt_sovangdangco_cauhon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="(Bạn đang có 0 thỏi vàng)"
+                android:textColor="#009688"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_sothoivang_cauhon" />
+
+            <Button
+                android:id="@+id/Btn_guiloicauhon_cauhon"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Gửi"
+                android:textColor="#ffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Txt_sovangdangco_cauhon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
