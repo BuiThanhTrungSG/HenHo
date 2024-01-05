@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.henho.banmuonhenho">
+    package="com.love.henho">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,9 +13,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" tools:node="remove" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
-        android:name="com.henho.banmuonhenho.EmojiApplication"
+        android:name="com.love.henho.EmojiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,36 +24,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden">
-        <activity android:name="com.henho.banmuonhenho.Bi_mat_xem"></activity>
-        <activity android:name="com.henho.banmuonhenho.Bi_mat_them" />
-        <activity android:name="com.henho.banmuonhenho.Dang_tin_thue_muon" />
-        <activity android:name="com.henho.banmuonhenho.Thue_muon" />
-        <activity android:name="com.henho.banmuonhenho.Nguoi_la_chat" />
-        <activity android:name="com.henho.banmuonhenho.Nguoi_la" />
-        <activity android:name="com.henho.banmuonhenho.Phong_chat_tinh" />
-        <activity android:name="com.henho.banmuonhenho.Hop_tuoi" />
+        <activity android:name="com.love.henho.Bi_mat_xem"></activity>
+        <activity android:name="com.love.henho.Bi_mat_them" />
+        <activity android:name="com.love.henho.Dang_tin_thue_muon" />
+        <activity android:name="com.love.henho.Thue_muon" />
+        <activity android:name="com.love.henho.Nguoi_la_chat" />
+        <activity android:name="com.love.henho.Nguoi_la" />
+        <activity android:name="com.love.henho.Phong_chat_tinh" />
+        <activity android:name="com.love.henho.Hop_tuoi" />
 
-        <service android:name="com.henho.banmuonhenho.MyService" />
+        <service android:name="com.love.henho.MyService" />
 
-        <activity android:name="com.henho.banmuonhenho.Danh_sach_nguoi_nhan_loi" />
-        <activity android:name="com.henho.banmuonhenho.Ho_so_hen_gap" />
-        <activity android:name="com.henho.banmuonhenho.Tao_cuoc_hen" />
-        <activity android:name="com.henho.banmuonhenho.Hen_gap" />
-        <activity android:name="com.henho.banmuonhenho.Tim_quanh_day" />
-        <activity android:name="com.henho.banmuonhenho.Nguoi_duoc_cau_hon" />
-        <activity android:name="com.henho.banmuonhenho.Nguoi_cau_hon" />
-        <activity android:name="com.henho.banmuonhenho.Cau_hon_bo_sung" />
-        <activity android:name="com.henho.banmuonhenho.Cau_hon" />
-        <activity android:name="com.henho.banmuonhenho.Dang_ky" />
-        <activity android:name="com.henho.banmuonhenho.Admin_control" />
-        <activity android:name="com.henho.banmuonhenho.Tang_dang_cap" />
-        <activity android:name="com.henho.banmuonhenho.Sua_ho_so" />
-        <activity android:name="com.henho.banmuonhenho.Doi_mat_khau" />
-        <activity android:name="com.henho.banmuonhenho.Ho_so" />
-        <activity android:name="com.henho.banmuonhenho.Quen_mat_khau" />
-        <activity android:name="com.henho.banmuonhenho.Nhan_tin" />
-        <activity android:name="com.henho.banmuonhenho.Dang_nhap" />
-        <activity android:name="com.henho.banmuonhenho.MainActivity"
+        <activity android:name="com.love.henho.Danh_sach_nguoi_nhan_loi" />
+        <activity android:name="com.love.henho.Ho_so_hen_gap" />
+        <activity android:name="com.love.henho.Tao_cuoc_hen" />
+        <activity android:name="com.love.henho.Hen_gap" />
+        <activity android:name="com.love.henho.Tim_quanh_day" />
+        <activity android:name="com.love.henho.Nguoi_duoc_cau_hon" />
+        <activity android:name="com.love.henho.Nguoi_cau_hon" />
+        <activity android:name="com.love.henho.Cau_hon_bo_sung" />
+        <activity android:name="com.love.henho.Cau_hon" />
+        <activity android:name="com.love.henho.Dang_ky" />
+        <activity android:name="com.love.henho.Admin_control" />
+        <activity android:name="com.love.henho.Tang_dang_cap" />
+        <activity android:name="com.love.henho.Sua_ho_so" />
+        <activity android:name="com.love.henho.Doi_mat_khau" />
+        <activity android:name="com.love.henho.Ho_so" />
+        <activity android:name="com.love.henho.Quen_mat_khau" />
+        <activity android:name="com.love.henho.Nhan_tin" />
+        <activity android:name="com.love.henho.Dang_nhap" />
+        <activity android:name="com.love.henho.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_home" android:title="Trang chủ" android:icon="@drawable/icon_home"/>
-    <item android:id="@+id/menu_phongchat" android:title="Cộng đồng" android:icon="@drawable/ic_baseline_phongchat"/>
     <item android:id="@+id/menu_tinhan" android:title="Tin nhắn" android:icon="@drawable/icon_tinnhan"/>
     <item android:id="@+id/menu_canhan" android:title="Cá nhân" android:icon="@drawable/icon_canhan"/>
 </menu>
