@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
 
         Anh_xa_trangchu();
 
-        createInterstitialAd();
+//        createInterstitialAd();
 
         if( getIntent().getBooleanExtra("Exit me", false)){finishAffinity();}
 

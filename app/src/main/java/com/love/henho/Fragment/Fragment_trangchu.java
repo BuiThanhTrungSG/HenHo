@@ -37,6 +37,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -67,7 +68,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Fragment_trangchu extends Fragment implements OnItemClickListener_trangchu {
@@ -79,7 +82,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
     DatabaseReference mData;
     FirebaseFirestore db;
     Query Query_locdanhsach;
-    ImageView Btn_quaylai_trangchu, Btn_tangvang_trangchu, Btn_hengap_trangchu, Btn_thuemuon_trangchu, Btn_nguoila_trangchu, Btn_timkiem_trangchu, Btn_timquanhday_trangchu, Btn_phongchat_trangchu, Btn_boitinhyeu_trangchu;
+    ImageView Btn_quaylai_trangchu, Btn_tangvang_trangchu, Btn_hengap_trangchu, Btn_thuemuon_trangchu, Btn_nguoila_trangchu, Btn_timkiem_trangchu, Btn_timquanhday_trangchu, Btn_phongchat_trangchu, Btn_hoptuoi_trangchu;
     Button Btn_huytimkiemthanhvien_trangchu, Btn_timkiemthanhvien_trangchu;
     LinearLayout Layuotphu1_timkiem_trangchu, ds_menu_trangchu;
     TextView Txt_danhsachthanhvien_trangchu;
@@ -133,7 +136,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
         Btn_hengap_trangchu = view.findViewById(R.id.Btn_hengap_trangchu);
         Btn_quaylai_trangchu = view.findViewById(R.id.Btn_quaylai_trangchu);
         Btn_phongchat_trangchu = view.findViewById(R.id.Btn_phongchat_trangchu);
-        Btn_boitinhyeu_trangchu = view.findViewById(R.id.Btn_boitinhyeu_trangchu);
+        Btn_hoptuoi_trangchu = view.findViewById(R.id.Btn_boitinhyeu_trangchu);
         Btn_nguoila_trangchu = view.findViewById(R.id.Btn_nguoila_trangchu);
         Btn_thuemuon_trangchu = view.findViewById(R.id.Btn_thuemuon_trangchu);
         Btn_dong_quangcao = view.findViewById(R.id.Btn_dong_quangcao);
@@ -276,7 +279,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
             }
         });
 
-        Btn_boitinhyeu_trangchu.setOnClickListener(new View.OnClickListener() {
+        Btn_hoptuoi_trangchu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(User == null) {

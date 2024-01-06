@@ -76,14 +76,14 @@ public class Dang_nhap extends AppCompatActivity{
 
         Anh_xa();
 // Quảng cáo
-        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
-        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
-            @Override
-            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
-            {
-                createBannerAd();
-            }
-        } );
+//        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
+//        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
+//            @Override
+//            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
+//            {
+//                createBannerAd();
+//            }
+//        } );
 
 // đăng nhập google
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
@@ -255,16 +255,12 @@ public class Dang_nhap extends AppCompatActivity{
             @Override
             public void onSuccess(AuthResult authResult) {
                 if (Objects.requireNonNull(authResult.getAdditionalUserInfo()).isNewUser()){
+
                     FirebaseUser USER = mAuth.getCurrentUser();
                     assert USER != null;
-                    Model_thanhvien trunggian = new Model_thanhvien(USER.getUid(), getResources().getString(R.string.khachvanglai), 1980, "Gay", "An Giang", "Ở góa", "Hết cấp 1", "Thông tin này đang được xét duyệt và sẽ hiển thị nếu đảm bảo quy định.", "Tìm bạn bè mới", "Tự do", "Thông tin này đang được xét duyệt và sẽ hiển thị nếu đảm bảo quy định.", songaythangnam, songaythangnam, "https://firebasestorage.googleapis.com/v0/b/banmuonhh-a42dd.appspot.com/o/logonho.png?alt=media&token=3fcf15c8-2402-4edf-8102-7a2a0347eb6b", 0,USER.getEmail(), "Bình dân");
-                    mData.child("USERS").child(USER.getUid()).setValue(trunggian);
-                    mData.child("USERS").child(USER.getUid()).child("locdanhsach").setValue("Không chọn"); // Hỗ trợ cho việc lọc danh sách sau này
-                    mData.child("USERS").child(USER.getUid()).child("sovangdangco").setValue(0);
-                    mData.child("USERS").child(USER.getUid()).child("dangcap").setValue("Bình dân");
+                    Model_thanhvien trunggian = new Model_thanhvien(USER.getUid(), getResources().getString(R.string.khachvanglai), 1980, "Gay", "An Giang", "Ở góa", "Hết cấp 1", "Người này chưa viết gì.", "Tìm bạn bè mới", "Tự do", songaythangnam, songaythangnam, "https://firebasestorage.googleapis.com/v0/b/banmuonhh-a42dd.appspot.com/o/logonho.png?alt=media&token=3fcf15c8-2402-4edf-8102-7a2a0347eb6b", 0, USER.getEmail(), 0, "Không chọn");
                     FirebaseFirestore.getInstance().collection("USER").document(USER.getUid()).set(trunggian);
-                    FirebaseFirestore.getInstance().collection("USER").document(USER.getUid()).update("locdanhsach", "Không chọn");
-                    // Hỗ trợ cho việc lọc danh sách sau này
+
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                 }else {

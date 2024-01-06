@@ -3,6 +3,7 @@ package com.love.henho;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +21,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.love.henho.Model.Model_thanhvien;
+import com.love.henho.Model.Thongtin_user;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -29,7 +32,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Dang_ky extends AppCompatActivity {
@@ -100,7 +105,7 @@ public class Dang_ky extends AppCompatActivity {
         dulieu_noio.add(1,"Hà Nội");
         dulieu_noio.add(2,"Nước ngoài");
         // Sắp xếp danh sách xong
-        ArrayAdapter<String> Adapter_noio = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, dulieu_noio);
+        ArrayAdapter<String> Adapter_noio = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dulieu_noio);
         noio_dangky.setAdapter(Adapter_noio);
 // Tạo danh sách nơi ở xong
 
@@ -114,7 +119,7 @@ public class Dang_ky extends AppCompatActivity {
         dulieu_trinhdo.add("Đại học");
         dulieu_trinhdo.add("Thạc sỹ");
         dulieu_trinhdo.add("Tiến sỹ");
-        ArrayAdapter<String> Adapter_hocvan = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, dulieu_trinhdo);
+        ArrayAdapter<String> Adapter_hocvan = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dulieu_trinhdo);
         trinhdo_dangky.setAdapter(Adapter_hocvan);
 // Tạo xong danh sách học vấn
 
@@ -125,7 +130,7 @@ public class Dang_ky extends AppCompatActivity {
         dulieu_tinhtranghonnhan.add("Đã ly hôn");
         dulieu_tinhtranghonnhan.add("Ở góa");
         dulieu_tinhtranghonnhan.add("Quan hệ phức tạp");
-        ArrayAdapter<String> Adapter_tinhtranghonnhan = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, dulieu_tinhtranghonnhan);
+        ArrayAdapter<String> Adapter_tinhtranghonnhan = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dulieu_tinhtranghonnhan);
         tinhtranghonnhan_dangky.setAdapter(Adapter_tinhtranghonnhan);
 // Tạo xong danh sách tình trạng hôn nhân
 
@@ -137,15 +142,15 @@ public class Dang_ky extends AppCompatActivity {
         dulieu_muctieu.add("Tìm người tâm sự");
         dulieu_muctieu.add("Tìm bạn bè mới");
         dulieu_muctieu.add("Tìm đối tác kinh doanh");
-        ArrayAdapter<String> Adapter_muctieu = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, dulieu_muctieu);
+        ArrayAdapter<String> Adapter_muctieu = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, dulieu_muctieu);
         muctieu_dangky.setAdapter(Adapter_muctieu);
 // Tạo xong danh sách mục tiêu
 
 // Tạo danh sách năm sinh
         // Lấy năm hiện tại
-        DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
+        @SuppressLint("SimpleDateFormat") DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
         sonam = Integer.parseInt(dinhdangnam.format(Calendar.getInstance().getTime()));
-        DateFormat dinhdangngaythangnam = new SimpleDateFormat("yyyyMMdd");
+        @SuppressLint("SimpleDateFormat") DateFormat dinhdangngaythangnam = new SimpleDateFormat("yyyyMMdd");
         songaythangnam = Integer.parseInt(dinhdangngaythangnam.format(Calendar.getInstance().getTime()));
         // Lấy năm hiện tại xong
 
@@ -212,19 +217,17 @@ public class Dang_ky extends AppCompatActivity {
                                         USER = mAuth.getCurrentUser();
                                         mData = FirebaseDatabase.getInstance().getReference();
                                         Toast.makeText(Dang_ky.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                                        Model_thanhvien trunggian = new Model_thanhvien(USER.getUid(), dk_ten, dk_namsinh, dk_gioitinh, dk_noio, dk_tinhtranghonnhan, dk_trinhdo, "Thông tin này đang được xét duyệt và sẽ hiển thị nếu đảm bảo quy định.", dk_mucdichthamgia, dk_nghenghiep, dk_tugioithieu + "\nTìm người: " + dk_timnguoinhuthenao, songaythangnam, songaythangnam, "https://firebasestorage.googleapis.com/v0/b/banmuonhh-a42dd.appspot.com/o/logonho.png?alt=media&token=3fcf15c8-2402-4edf-8102-7a2a0347eb6b", 0,dk_email, "Bình dân");
-                                        mData.child("USERS").child(USER.getUid()).setValue(trunggian);
-                                        mData.child("USERS").child(USER.getUid()).child("locdanhsach").setValue("Không chọn"); // Hỗ trợ cho việc lọc danh sách sau này
-                                        mData.child("USERS").child(USER.getUid()).child("sovangdangco").setValue(0);
-                                        mData.child("USERS").child(USER.getUid()).child("dangcap").setValue("Bình dân");
+                                        Model_thanhvien trunggian = new Model_thanhvien(USER.getUid(), dk_ten, dk_namsinh, dk_gioitinh, dk_noio, dk_tinhtranghonnhan, dk_trinhdo, dk_tugioithieu + "\nTìm người: " + dk_timnguoinhuthenao, dk_mucdichthamgia, dk_nghenghiep, songaythangnam, songaythangnam, "https://firebasestorage.googleapis.com/v0/b/banmuonhh-a42dd.appspot.com/o/logonho.png?alt=media&token=3fcf15c8-2402-4edf-8102-7a2a0347eb6b", 0,dk_email, 0, "Không chọn");
                                         FirebaseFirestore.getInstance().collection("USER").document(USER.getUid()).set(trunggian);
-                                        FirebaseFirestore.getInstance().collection("USER").document(USER.getUid()).update("locdanhsach", "Không chọn");
-                                        // Hỗ trợ cho việc lọc danh sách sau này
+
                                         // Cập nhật thông tin cho phần duyệt nội dung giới thiệu
-                                        mData.child("QUAN_LY").child("duyetnoidung").child(USER.getUid()).child("ten").setValue(trunggian.getTen());
-                                        mData.child("QUAN_LY").child("duyetnoidung").child(USER.getUid()).child("ngaysua").setValue(trunggian.getNgaydangxuat());
-                                        mData.child("QUAN_LY").child("duyetnoidung").child(USER.getUid()).child("noidung").setValue(trunggian.getOnline());
-                                        mData.child("QUAN_LY").child("duyetnoidung").child(USER.getUid()).child("id").setValue(trunggian.getID());
+                                        Map<String,Object> noidung = new HashMap<>();
+                                        noidung.put("ten", trunggian.getTen());
+                                        noidung.put("ngaysua", trunggian.getNgaydangxuat());
+                                        noidung.put("noidung", trunggian.getGioithieubanthan());
+                                        noidung.put("id", trunggian.getID());
+                                        mData.child("QUAN_LY").child("duyetnoidung").child(USER.getUid()).setValue(noidung);
+
                                         // Cập nhật thông tin cho phần duyệt nội dung giới thiệu xong
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);

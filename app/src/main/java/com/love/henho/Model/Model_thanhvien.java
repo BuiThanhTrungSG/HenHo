@@ -12,18 +12,18 @@ public class Model_thanhvien {
     String Gioithieubanthan;
     String Mucdichthamgia;
     String Nghenghiep;
-    String Online;
     Integer Ngaydangky;
     Integer Ngaydangxuat;
     String Anhdaidien;
     Integer Songuoithich;
     String Email;
-    String Dangcap;
+    int Vang;
+    String Locdanhsach;
 
     public Model_thanhvien() {
     }
 
-    public Model_thanhvien(String ID, String ten, Integer namsinh, String gioitinh, String noio, String tinhtranghonnhan, String hocvan, String gioithieubanthan, String mucdichthamgia, String nghenghiep, String online, Integer ngaydangky, Integer ngaydangxuat, String anhdaidien, Integer songuoithich, String email, String dangcap) {
+    public Model_thanhvien(String ID, String ten, Integer namsinh, String gioitinh, String noio, String tinhtranghonnhan, String hocvan, String gioithieubanthan, String mucdichthamgia, String nghenghiep, Integer ngaydangky, Integer ngaydangxuat, String anhdaidien, Integer songuoithich, String email, int vang, String locdanhsach) {
         this.ID = ID;
         Ten = ten;
         Namsinh = namsinh;
@@ -34,13 +34,13 @@ public class Model_thanhvien {
         Gioithieubanthan = gioithieubanthan;
         Mucdichthamgia = mucdichthamgia;
         Nghenghiep = nghenghiep;
-        Online = online;
         Ngaydangky = ngaydangky;
         Ngaydangxuat = ngaydangxuat;
         Anhdaidien = anhdaidien;
         Songuoithich = songuoithich;
         Email = email;
-        Dangcap = dangcap;
+        Vang = vang;
+        Locdanhsach = locdanhsach;
     }
 
     public String getID() {
@@ -123,14 +123,6 @@ public class Model_thanhvien {
         Nghenghiep = nghenghiep;
     }
 
-    public String getOnline() {
-        return Online;
-    }
-
-    public void setOnline(String online) {
-        Online = online;
-    }
-
     public Integer getNgaydangky() {
         return Ngaydangky;
     }
@@ -171,11 +163,19 @@ public class Model_thanhvien {
         Email = email;
     }
 
-    public String getDangcap() {
-        return Dangcap;
+    public int getVang() {
+        return Vang;
     }
 
-    public void setDangcap(String dangcap) {
-        Dangcap = dangcap;
+    public void setVang(int vang) {
+        Vang = vang;
+    }
+
+    public String getLocdanhsach() {
+        return Locdanhsach;
+    }
+
+    public void setLocdanhsach(String locdanhsach) {
+        Locdanhsach = locdanhsach;
     }
 }

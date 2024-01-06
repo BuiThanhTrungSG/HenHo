@@ -79,14 +79,14 @@ public class Hop_tuoi extends AppCompatActivity implements OnItemClickListener_t
         spLuu = sp.edit();
         gson = new Gson();
 // Quảng cáo
-        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
-        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
-            @Override
-            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
-            {
-                createBannerAd();
-            }
-        } );
+//        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
+//        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
+//            @Override
+//            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
+//            {
+//                createBannerAd();
+//            }
+//        } );
 
 // Hiển thị danh sách
         Danhsach = new ArrayList<>();
@@ -103,6 +103,7 @@ public class Hop_tuoi extends AppCompatActivity implements OnItemClickListener_t
         mData.child("USERS").child(User.getUid()).child("namsinh").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 if(snapshot.getValue() != null) {
 
                     int namsinh = Integer.parseInt(snapshot.getValue().toString());
