@@ -15,6 +15,9 @@ import com.applovin.mediation.MaxAd;
 import com.applovin.mediation.MaxAdListener;
 import com.applovin.mediation.MaxError;
 import com.applovin.mediation.ads.MaxInterstitialAd;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,9 +26,16 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.love.henho.Adapter.Fragment_adapter;
+import com.love.henho.Model.Model_thanhvien;
 import com.love.henho.Model.Model_tinnhanmoi;
+import com.love.henho.Model.Thongtin_user;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 
@@ -35,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
     ViewPager2 viewPager;
     FirebaseAuth mAuth;
     FirebaseUser User;
+    FirebaseFirestore db;
     DatabaseReference mData;
     private MaxInterstitialAd interstitialAd;
     private int retryAttempt;
@@ -53,6 +64,41 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
         mAuth = FirebaseAuth.getInstance();
         User = mAuth.getCurrentUser();
         mData = FirebaseDatabase.getInstance().getReference();
+        db = FirebaseFirestore.getInstance();
+
+        if (User == null){
+            db.collection("USER").document(User.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                    if (documentSnapshot.exists()){
+                        Model_thanhvien thanhvien = documentSnapshot.toObject(Model_thanhvien.class);
+                        Thongtin_user.ID = thanhvien.getID();
+                        Thongtin_user.Ten = thanhvien.getTen();
+                        Thongtin_user.Namsinh = thanhvien.getNamsinh();
+                        Thongtin_user.Gioitinh = thanhvien.getGioitinh();
+                        Thongtin_user.Noio = thanhvien.getNoio();
+                        Thongtin_user.Tinhtranghonnhan = thanhvien.getTinhtranghonnhan();
+                        Thongtin_user.Hocvan = thanhvien.getHocvan();
+                        Thongtin_user.Gioithieubanthan = thanhvien.getGioithieubanthan();
+                        Thongtin_user.Mucdichthamgia = thanhvien.getMucdichthamgia();
+                        Thongtin_user.Nghenghiep = thanhvien.getNghenghiep();
+                        Thongtin_user.Ngaydangky = thanhvien.getNgaydangky();
+                        Thongtin_user.Ngaydangxuat = thanhvien.getNgaydangxuat();
+                        Thongtin_user.Anhdaidien = thanhvien.getAnhdaidien();
+                        Thongtin_user.Songuoithich = thanhvien.getSonguoithich();
+                        Thongtin_user.Email = thanhvien.getEmail();
+                        Thongtin_user.Vang = thanhvien.getVang();
+                        Thongtin_user.Locdanhsach = thanhvien.getLocdanhsach();
+                    }else {
+                        DateFormat dinhdangngaythangnam = new SimpleDateFormat("yyyyMMdd");
+                        Integer songaythangnam = Integer.parseInt(dinhdangngaythangnam.format(Calendar.getInstance().getTime()));
+                        Model_thanhvien trunggian = new Model_thanhvien(User.getUid(), getResources().getString(R.string.khachvanglai), 1980, "Gay", "An Giang", "Ở góa", "Hết cấp 1", "Người này chưa viết gì.", "Tìm bạn bè mới", "Tự do", songaythangnam, songaythangnam, "https://firebasestorage.googleapis.com/v0/b/banmuonhh-a42dd.appspot.com/o/logonho.png?alt=media&token=3fcf15c8-2402-4edf-8102-7a2a0347eb6b", 0, User.getEmail(), 0, "Không chọn");
+                        FirebaseFirestore.getInstance().collection("USER").document(User.getUid()).set(trunggian);
+                    }
+                }
+            });
+
+        }
 
         // tạo menu
         BottomNavigationView_trangchu.setOnItemSelectedListener(item -> {
@@ -70,9 +116,9 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
             return true;
         });
 
+        xuly_viewpager();
+         // tạo menu xong
 
-            xuly_viewpager();
-            // tạo menu xong
 // Kiểm tra xem quay lại từ trang tin nhắn thì hiện fragment tin nhắn luôn
         Intent intent2 = getIntent();
         Boolean kiemtra1 = intent2.getBooleanExtra("sangtrang2", false);

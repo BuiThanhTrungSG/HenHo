@@ -13,11 +13,13 @@ public class Model_laythongtin_trangcanhan {
     Integer Ngaydangxuat;
     String Anhdaidien;
     String Gioithieubanthan;
+    int Vang;
+    int Songuoithich;
 
     public Model_laythongtin_trangcanhan() {
     }
 
-    public Model_laythongtin_trangcanhan(String ten, Integer namsinh, String gioitinh, String noio, String hocvan, String tinhtranghonnhan, String mucdichthamgia, String nghenghiep, Integer ngaydangky, Integer ngaydangxuat, String anhdaidien, String gioithieubanthan) {
+    public Model_laythongtin_trangcanhan(String ten, Integer namsinh, String gioitinh, String noio, String hocvan, String tinhtranghonnhan, String mucdichthamgia, String nghenghiep, Integer ngaydangky, Integer ngaydangxuat, String anhdaidien, String gioithieubanthan, int vang, int songuoithich) {
         Ten = ten;
         Namsinh = namsinh;
         Gioitinh = gioitinh;
@@ -30,6 +32,8 @@ public class Model_laythongtin_trangcanhan {
         Ngaydangxuat = ngaydangxuat;
         Anhdaidien = anhdaidien;
         Gioithieubanthan = gioithieubanthan;
+        Vang = vang;
+        Songuoithich = songuoithich;
     }
 
     public String getTen() {
@@ -126,5 +130,21 @@ public class Model_laythongtin_trangcanhan {
 
     public void setGioithieubanthan(String gioithieubanthan) {
         Gioithieubanthan = gioithieubanthan;
+    }
+
+    public int getVang() {
+        return Vang;
+    }
+
+    public void setVang(int vang) {
+        Vang = vang;
+    }
+
+    public int getSonguoithich() {
+        return Songuoithich;
+    }
+
+    public void setSonguoithich(int songuoithich) {
+        Songuoithich = songuoithich;
     }
 }

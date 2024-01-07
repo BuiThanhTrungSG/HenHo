@@ -10,12 +10,12 @@ public class Model_thanhvienmoidangnhap {
     String Nghenghiep;
     Integer Ngaydangxuat;
     String Anhdaidien;
-    String Dangcap;
+    int Vang;
 
     public Model_thanhvienmoidangnhap() {
     }
 
-    public Model_thanhvienmoidangnhap(String ID, String ten, Integer namsinh, String gioitinh, String gioithieubanthan, String mucdichthamgia, String nghenghiep, Integer ngaydangxuat, String anhdaidien, String dangcap) {
+    public Model_thanhvienmoidangnhap(String ID, String ten, Integer namsinh, String gioitinh, String gioithieubanthan, String mucdichthamgia, String nghenghiep, Integer ngaydangxuat, String anhdaidien, int vang) {
         this.ID = ID;
         Ten = ten;
         Namsinh = namsinh;
@@ -25,7 +25,7 @@ public class Model_thanhvienmoidangnhap {
         Nghenghiep = nghenghiep;
         Ngaydangxuat = ngaydangxuat;
         Anhdaidien = anhdaidien;
-        Dangcap = dangcap;
+        Vang = vang;
     }
 
     public String getID() {
@@ -100,11 +100,11 @@ public class Model_thanhvienmoidangnhap {
         Anhdaidien = anhdaidien;
     }
 
-    public String getDangcap() {
-        return Dangcap;
+    public int getVang() {
+        return Vang;
     }
 
-    public void setDangcap(String dangcap) {
-        Dangcap = dangcap;
+    public void setVang(int vang) {
+        Vang = vang;
     }
 }

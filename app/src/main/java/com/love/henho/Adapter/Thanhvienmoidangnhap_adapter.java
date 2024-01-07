@@ -1,5 +1,6 @@
 package com.love.henho.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -45,12 +46,9 @@ public class Thanhvienmoidangnhap_adapter extends RecyclerView.Adapter<Thanhvien
         return new ViewHolder_thanhvienmoidangnhap(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder_thanhvienmoidangnhap holder, int position) {
-
-//        mAuth = FirebaseAuth.getInstance();
-//        User = mAuth.getCurrentUser();
-//        mData = FirebaseDatabase.getInstance().getReference();
 
         holder.ten_dsdn.setText(DanhsachtrongAdapter.get(position).getTen());
         holder.nghenghiep_dsdn.setText(DanhsachtrongAdapter.get(position).getNghenghiep());
@@ -58,28 +56,33 @@ public class Thanhvienmoidangnhap_adapter extends RecyclerView.Adapter<Thanhvien
         holder.gioithieu_dsdn.setText("Giới thiệu: " + DanhsachtrongAdapter.get(position).getGioithieubanthan());
         Picasso.get().load(DanhsachtrongAdapter.get(position).getAnhdaidien()).into(holder.avata_dsdn);
 
-        holder.dangcap_dsdn.setText(DanhsachtrongAdapter.get(position).getDangcap());
+        final int soVang = DanhsachtrongAdapter.get(position).getVang();
         // Đổi màu đẳng cấp
-            if (DanhsachtrongAdapter.get(position).getDangcap().equals("Khá giả")) {
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#04B1FF"));
-                holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao1);
-                holder.Img_sao_dsdn.setVisibility(View.VISIBLE);
-            } else if (DanhsachtrongAdapter.get(position).getDangcap().equals("Giàu có")) {
-                holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao2);
-                holder.Img_sao_dsdn.setVisibility(View.VISIBLE);
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#EB08FB"));
-            } else if (DanhsachtrongAdapter.get(position).getDangcap().equals("Đại gia")) {
+        //
+            if (soVang > 1000) {
                 holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao3);
                 holder.Img_sao_dsdn.setVisibility(View.VISIBLE);
                 holder.dangcap_dsdn.setTextColor(Color.parseColor("#E91E63"));
+                holder.dangcap_dsdn.setText("Đại gia");
+            } else if (soVang > 300) {
+                holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao2);
+                holder.Img_sao_dsdn.setVisibility(View.VISIBLE);
+                holder.dangcap_dsdn.setTextColor(Color.parseColor("#EB08FB"));
+                holder.dangcap_dsdn.setText("Giàu có");
+            } else if (soVang > 100) {
+                holder.dangcap_dsdn.setTextColor(Color.parseColor("#04B1FF"));
+                holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao1);
+                holder.Img_sao_dsdn.setVisibility(View.VISIBLE);
+                holder.dangcap_dsdn.setText("Khá giả");
             } else {
                 holder.Img_sao_dsdn.setImageResource(R.drawable.icon_sao0);
                 holder.Img_sao_dsdn.setVisibility(View.GONE);
                 holder.dangcap_dsdn.setTextColor(Color.parseColor("#4CAF50"));
+                holder.dangcap_dsdn.setText("Bình dân");
             }
         // Đổi màu đẳng cấp xong
 
-        DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
+        @SuppressLint("SimpleDateFormat") DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
         sonam = Integer.parseInt(dinhdangnam.format(Calendar.getInstance().getTime()));
         sotuoi = sonam - DanhsachtrongAdapter.get(position).getNamsinh();
         holder.tuoi_dsdn.setText(sotuoi.toString());
@@ -97,23 +100,30 @@ public class Thanhvienmoidangnhap_adapter extends RecyclerView.Adapter<Thanhvien
         if(congiap == 11){holder.Img_icontuoi_dsdn.setImageResource(R.drawable.t_mui);}
         if(congiap == 0){holder.Img_icontuoi_dsdn.setImageResource(R.drawable.t_than);}
 
-        holder.gioitinh_dsdn.setText(DanhsachtrongAdapter.get(position).getGioitinh());
-        if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Nam")) {
-            holder.ten_dsdn.setTextColor(Color.parseColor("#00BCD4"));
-            holder.gioitinh_dsdn.setTextColor(Color.parseColor("#00BCD4"));
-            holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nam);
-        } else if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Nữ")) {
-            holder.ten_dsdn.setTextColor(Color.parseColor("#FF95B9"));
-            holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FF95B9"));
-            holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nu);
-        } else if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Les")) {
-            holder.ten_dsdn.setTextColor(Color.parseColor("#FFC003"));
-            holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FFC003"));
-            holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
-        } else {
-            holder.ten_dsdn.setTextColor(Color.parseColor("#73D600"));
-            holder.gioitinh_dsdn.setTextColor(Color.parseColor("#73D600"));
-            holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
+        final String gioiTinh = DanhsachtrongAdapter.get(position).getGioitinh();
+        holder.gioitinh_dsdn.setText(gioiTinh);
+        
+        switch (gioiTinh) {
+            case "Nam":
+                holder.ten_dsdn.setTextColor(Color.parseColor("#00BCD4"));
+                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#00BCD4"));
+                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nam);
+                break;
+            case "Nữ":
+                holder.ten_dsdn.setTextColor(Color.parseColor("#FF95B9"));
+                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FF95B9"));
+                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nu);
+                break;
+            case "Les":
+                holder.ten_dsdn.setTextColor(Color.parseColor("#FFC003"));
+                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FFC003"));
+                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
+                break;
+            default:
+                holder.ten_dsdn.setTextColor(Color.parseColor("#73D600"));
+                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#73D600"));
+                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
+                break;
         }
 
             // Bổ sung cho việc tạo sự kiện Itemclick

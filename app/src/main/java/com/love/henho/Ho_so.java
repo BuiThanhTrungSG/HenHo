@@ -2,6 +2,8 @@ package com.love.henho;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -81,15 +83,15 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
 
         Anhxa();
 // Quảng cáo
-        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
-        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
-            @Override
-            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
-            {
-                createBannerAd();
-                createInterstitialAd();
-            }
-        } );
+//        AppLovinSdk.getInstance(this).setMediationProvider( "max" );
+//        AppLovinSdk.initializeSdk(this, new AppLovinSdk.SdkInitializationListener() {
+//            @Override
+//            public void onSdkInitialized(final AppLovinSdkConfiguration configuration)
+//            {
+//                createBannerAd();
+//                createInterstitialAd();
+//            }
+//        } );
 
 // lấy số hồ sơ (ID chủ hồ sơ) từ trang trước truyền qua
         Intent intent = getIntent();
@@ -99,6 +101,7 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
 
 // Kiểm tra xem có đang xem hồ sơ của chỉnh mình không
         if(USER != null){
+            assert sohoso != null;
             if(sohoso.equals(USER.getUid())){
                 phanguitinnhanvathich_hoso.setVisibility(View.INVISIBLE);
             }else {
@@ -136,88 +139,17 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
         }
 
 // Lấy trạng thái của nút Thích xong.
-
-// Đếm số người cầu hôn
-        mData.child("USERS").child(sohoso).child("nguoicauhon").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                mData.child("USERS").child(sohoso).child("songuoithich").setValue(snapshot.getChildrenCount());
-//                FirebaseFirestore.getInstance().collection("USER").document(sohoso).update("songuoithich", snapshot.getChildrenCount());
-                Txt_songuoicauhon_hoso.setText(snapshot.getChildrenCount() + "");
-                if(snapshot.getChildrenCount() == 0){
-                    Btn_nguoicauhon_hoso.setVisibility(View.INVISIBLE);
-                }else {
-                    Btn_nguoicauhon_hoso.setVisibility(View.VISIBLE);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-// Đếm số người cầu hôn xong
-
-// Đếm số vàng đang có
-        mData.child("USERS").child(sohoso).child("sovangdangco").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                sovang_hoso = Integer.parseInt(snapshot.getValue().toString());
-                Txt_sothoivang_hoso.setText("Đang có " + sovang_hoso + " thỏi vàng");
-
-                if(sovang_hoso < 100){
-                    dangcap_hoso.setText("Bình dân");
-                    Img_sao_hoso.setImageResource(R.drawable.icon_sao0);
-                    Img_sao_hoso.setVisibility(View.GONE);
-                    mData.child("USERS").child(sohoso).child("dangcap").setValue("Bình dân");
-                    FirebaseFirestore.getInstance().collection("USER").document(sohoso).update("dangcap", "Bình dân");
-
-                }
-                if(sovang_hoso >= 100 && sovang_hoso < 300){
-                    dangcap_hoso.setText("Khá giả");
-                    Img_sao_hoso.setImageResource(R.drawable.icon_sao1);
-                    Img_sao_hoso.setVisibility(View.VISIBLE);
-                    mData.child("USERS").child(sohoso).child("dangcap").setValue("Khá giả");
-                    FirebaseFirestore.getInstance().collection("USER").document(sohoso).update("dangcap", "Khá giả");
-                }
-                if(sovang_hoso >= 300 && sovang_hoso < 1000){
-                    Img_sao_hoso.setImageResource(R.drawable.icon_sao2);
-                    Img_sao_hoso.setVisibility(View.VISIBLE);
-                    dangcap_hoso.setText("Giàu có");
-                    mData.child("USERS").child(sohoso).child("dangcap").setValue("Giàu có");
-                    FirebaseFirestore.getInstance().collection("USER").document(sohoso).update("dangcap", "Giàu có");
-                }
-                if(sovang_hoso >= 1000){
-                    Img_sao_hoso.setImageResource(R.drawable.icon_sao3);
-                    Img_sao_hoso.setVisibility(View.VISIBLE);
-                    dangcap_hoso.setText("Đại gia");
-                    mData.child("USERS").child(sohoso).child("dangcap").setValue("Đại gia");
-                    FirebaseFirestore.getInstance().collection("USER").document(sohoso).update("dangcap", "Đại gia");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-// Đếm số vàng đang có xong
-
-        // Lấy năm hiện tại
-        DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
-        sonam = Integer.parseInt(dinhdangnam.format(Calendar.getInstance().getTime()));
-        // Lấy năm hiện tại xong
-
-// đọc danh sách
-        Source source = Source.CACHE;
-        db.collection("USER").document(sohoso).get(source).addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        db.collection("USER").document(sohoso).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
+
                 Model_laythongtin_trangcanhan layve = documentSnapshot.toObject(Model_laythongtin_trangcanhan.class);
+
+                assert layve != null;
                 ten_hoso.setText(layve.getTen());
-                Integer sotuoi = sonam - layve.getNamsinh();
-                tuoi_hoso.setText(sotuoi.toString());
+                int sotuoi = sonam - layve.getNamsinh();
+                tuoi_hoso.setText(String.valueOf(sotuoi));
                 gioitinh_hoso.setText(layve.getGioitinh());
                 noio_hoso.setText(layve.getNoio());
                 hocvan_hoso.setText(layve.getHocvan());
@@ -254,8 +186,47 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
                 }else {
                     Linear_anhbimat_hoso.setVisibility(View.GONE);
                 }
+
+                Txt_songuoicauhon_hoso.setText(String.valueOf(layve.getSonguoithich()));
+                if(layve.getSonguoithich() == 0){
+                    Btn_nguoicauhon_hoso.setVisibility(View.INVISIBLE);
+                }else {
+                    Btn_nguoicauhon_hoso.setVisibility(View.VISIBLE);
+                }
+
+                sovang_hoso = layve.getVang();
+                Txt_sothoivang_hoso.setText("Đang có " + sovang_hoso + " thỏi vàng");
+
+                if(sovang_hoso >= 1000){
+                    Img_sao_hoso.setImageResource(R.drawable.icon_sao3);
+                    Img_sao_hoso.setVisibility(View.VISIBLE);
+                    dangcap_hoso.setText("Đại gia");
+                }
+                else if(sovang_hoso > 300){
+                    Img_sao_hoso.setImageResource(R.drawable.icon_sao2);
+                    Img_sao_hoso.setVisibility(View.VISIBLE);
+                    dangcap_hoso.setText("Giàu có");
+                }
+                else if(sovang_hoso > 100){
+                    dangcap_hoso.setText("Khá giả");
+                    Img_sao_hoso.setImageResource(R.drawable.icon_sao1);
+                    Img_sao_hoso.setVisibility(View.VISIBLE);
+                }
+                else {
+                    dangcap_hoso.setText("Bình dân");
+                    Img_sao_hoso.setImageResource(R.drawable.icon_sao0);
+                    Img_sao_hoso.setVisibility(View.GONE);
+                }
             }
         });
+
+
+        // Lấy năm hiện tại
+        DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
+        sonam = Integer.parseInt(dinhdangnam.format(Calendar.getInstance().getTime()));
+        // Lấy năm hiện tại xong
+
+// đọc danh sách
 // kết thúc đọc danh sách
 
         Btn_guitinnhan.setOnClickListener(new View.OnClickListener() {

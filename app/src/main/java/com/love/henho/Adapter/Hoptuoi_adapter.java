@@ -1,5 +1,6 @@
 package com.love.henho.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -44,6 +45,7 @@ public class Hoptuoi_adapter extends RecyclerView.Adapter<Hoptuoi_adapter.ViewHo
         return new Hoptuoi_adapter.ViewHolder_thanhvienmoidangnhap(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull final Hoptuoi_adapter.ViewHolder_thanhvienmoidangnhap holder, int position) {
 
@@ -56,7 +58,7 @@ public class Hoptuoi_adapter extends RecyclerView.Adapter<Hoptuoi_adapter.ViewHo
         holder.gioithieu_dsdn.setText("Giới thiệu: " + DanhsachtrongAdapter.get(position).getGioithieubanthan());
         Picasso.get().load(DanhsachtrongAdapter.get(position).getAnhdaidien()).into(holder.avata_dsdn);
 
-        DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
+        @SuppressLint("SimpleDateFormat") DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
         sonam = Integer.parseInt(dinhdangnam.format(Calendar.getInstance().getTime()));
         sotuoi = sonam - DanhsachtrongAdapter.get(position).getNamsinh();
         holder.tuoi_dsdn.setText(sotuoi.toString());
@@ -74,45 +76,48 @@ public class Hoptuoi_adapter extends RecyclerView.Adapter<Hoptuoi_adapter.ViewHo
         if(congiap == 11){holder.Img_icontuoi_dsdn.setImageResource(R.drawable.t_mui);}
         if(congiap == 0){holder.Img_icontuoi_dsdn.setImageResource(R.drawable.t_than);}
 
-        holder.dangcap_dsdn.setText(DanhsachtrongAdapter.get(position).getDangcap());
-        if(DanhsachtrongAdapter.get(position).getDangcap() != null) {
-            // Đổi màu đẳng cấp
-            if (DanhsachtrongAdapter.get(position).getDangcap().equals("Khá giả")) {
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#04B1FF"));
-            } else if (DanhsachtrongAdapter.get(position).getDangcap().equals("Giàu có")) {
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#EB08FB"));
-            } else if (DanhsachtrongAdapter.get(position).getDangcap().equals("Đại gia")) {
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#E91E63"));
-            } else {
-                holder.dangcap_dsdn.setTextColor(Color.parseColor("#4CAF50"));
-            }
+        final int soVang = DanhsachtrongAdapter.get(position).getVang();
+        // Đổi màu đẳng cấp
+        if (soVang > 1000) {
+            holder.dangcap_dsdn.setTextColor(Color.parseColor("#E91E63"));
+            holder.dangcap_dsdn.setText("Đại gia");
+        } else if (soVang > 300) {
+            holder.dangcap_dsdn.setTextColor(Color.parseColor("#EB08FB"));
+            holder.dangcap_dsdn.setText("Giàu có");
+        } else if (soVang > 100) {
+            holder.dangcap_dsdn.setTextColor(Color.parseColor("#04B1FF"));
+            holder.dangcap_dsdn.setText("Khá giả");
+        } else {
+            holder.dangcap_dsdn.setTextColor(Color.parseColor("#4CAF50"));
+            holder.dangcap_dsdn.setText("Bình dân");
         }
         // Đổi màu đẳng cấp xong
 
         if (DanhsachtrongAdapter.get(position).getGioitinh() != null) {
-            holder.gioitinh_dsdn.setText(DanhsachtrongAdapter.get(position).getGioitinh());
-        }
-        // Đổi màu giới tính
-        if(DanhsachtrongAdapter.get(position).getGioitinh() != null) {
-            if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Nam")) {
-                holder.ten_dsdn.setTextColor(Color.parseColor("#00BCD4"));
-                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#00BCD4"));
-                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nam);
-            } else if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Nữ")) {
-                holder.ten_dsdn.setTextColor(Color.parseColor("#FF95B9"));
-                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FF95B9"));
-                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nu);
-            } else if (DanhsachtrongAdapter.get(position).getGioitinh().equals("Les")) {
-                holder.ten_dsdn.setTextColor(Color.parseColor("#FFC003"));
-                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FFC003"));
-                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
-            } else {
-                holder.ten_dsdn.setTextColor(Color.parseColor("#73D600"));
-                holder.gioitinh_dsdn.setTextColor(Color.parseColor("#73D600"));
-                holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
-            }
-        }
-        // Đổi màu giới tính xong
+            final String gioiTinh = DanhsachtrongAdapter.get(position).getGioitinh();
+            holder.gioitinh_dsdn.setText(gioiTinh);
+            switch (gioiTinh) {
+                case "Nam":
+                    holder.ten_dsdn.setTextColor(Color.parseColor("#00BCD4"));
+                    holder.gioitinh_dsdn.setTextColor(Color.parseColor("#00BCD4"));
+                    holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nam);
+                    break;
+                case "Nữ":
+                    holder.ten_dsdn.setTextColor(Color.parseColor("#FF95B9"));
+                    holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FF95B9"));
+                    holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_nu);
+                    break;
+                case "Les":
+                    holder.ten_dsdn.setTextColor(Color.parseColor("#FFC003"));
+                    holder.gioitinh_dsdn.setTextColor(Color.parseColor("#FFC003"));
+                    holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
+                    break;
+                default:
+                    holder.ten_dsdn.setTextColor(Color.parseColor("#73D600"));
+                    holder.gioitinh_dsdn.setTextColor(Color.parseColor("#73D600"));
+                    holder.Img_icongioitinh_dsdn.setImageResource(R.drawable.icon_dongtinh);
+                    break;
+            }   }
 
         // Bổ sung cho việc tạo sự kiện Itemclick
         holder.itemclick = DanhsachtrongAdapter.get(position).getID();
