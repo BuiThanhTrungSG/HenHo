@@ -69,12 +69,12 @@ public class Fragment_canhan extends Fragment {
     DatabaseReference mData;
     FirebaseUser USER;
     String sonam;
-    ImageView Btn_bimat_canhan, avata_hoso, Img_sao_canhan;
+    ImageView avata_hoso;
     ConstraintLayout phanhoso;
     LinearLayout LinearLayuot_denghidangnhap;
     ImageView Btn_suahoso, Btn_doimatkhau, Btn_dangxuat_canhan, Btn_tangdangcap_canhan;
-    Button Btn_nguoiduocauhon_canhan, Btn_danhsachnguoithich_canhan, Btn_dangnhap_canhan, Btn_dangky_canhan, Btn_doianhdaidien;
-    TextView Txt_nguoidathich_canhan, Txt_dangcap_canhan, Txt_nguoithich_canhan, Txt_sotien_dangcap_canhan, ten_hoso, tuoi_hoso, gioitinh_hoso, noio_hoso, hocvan_hoso, tinhtranghonnhan_hoso, mucdichthamgia_hoso, nghenghiep_hoso, ngaythamgia_hoso, ngaydangnhap_hoso, gioithieubanthan_hoso;
+    Button Btn_dangnhap_canhan, Btn_dangky_canhan, Btn_doianhdaidien;
+    TextView Txt_dangcap_canhan, Txt_nguoithich_canhan, Txt_sotien_dangcap_canhan, ten_hoso, tuoi_hoso, gioitinh_hoso, noio_hoso, hocvan_hoso, tinhtranghonnhan_hoso, mucdichthamgia_hoso, nghenghiep_hoso, ngaythamgia_hoso, gioithieubanthan_hoso;
     public Uri imageUri;
     private FirebaseStorage storage;
     private StorageReference storageReference;
@@ -110,14 +110,16 @@ public class Fragment_canhan extends Fragment {
                     startActivity(intent);
                 }
             });
+
         }else {
+
             phanhoso.setVisibility(View.VISIBLE);
             LinearLayuot_denghidangnhap.setVisibility(View.INVISIBLE);
 
             // Lấy năm hiện tại
-            DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
+            @SuppressLint("SimpleDateFormat") DateFormat dinhdangnam = new SimpleDateFormat("yyyy");
             sonam = dinhdangnam.format(Calendar.getInstance().getTime());
-            final DateFormat dinhdanglai = new SimpleDateFormat("dd/MM/yyyy");
+            @SuppressLint("SimpleDateFormat") final DateFormat dinhdanglai = new SimpleDateFormat("dd/MM/yyyy");
             // Lấy năm hiện tại xong
 
 // Đếm số vàng đang có
@@ -125,27 +127,24 @@ public class Fragment_canhan extends Fragment {
             if (sovang > 1000) {
                 Txt_dangcap_canhan.setText("Đại gia");
                 Txt_dangcap_canhan.setTextColor(Color.parseColor("#E91E63"));
-                Img_sao_canhan.setImageResource(R.drawable.icon_sao3);
             }
             else if (sovang > 300) {
                 Txt_dangcap_canhan.setText("Giàu có");
                 Txt_dangcap_canhan.setTextColor(Color.parseColor("#EB08FB"));
-                Img_sao_canhan.setImageResource(R.drawable.icon_sao2);
             }
             else if (sovang > 100) {
                 Txt_dangcap_canhan.setText("Khá giả");
                 Txt_dangcap_canhan.setTextColor(Color.parseColor("#04B1FF"));
-                Img_sao_canhan.setImageResource(R.drawable.icon_sao1);
             }
             else {
                 Txt_dangcap_canhan.setText("Bình dân");
                 Txt_dangcap_canhan.setTextColor(Color.parseColor("#4CAF50"));
-                Img_sao_canhan.setImageResource(R.drawable.icon_sao0);
             }
 
             Txt_nguoithich_canhan.setText(String.valueOf(Thongtin_user.Songuoithich));
             ten_hoso.setText(Thongtin_user.Ten);
             tuoi_hoso.setText("Tuổi: " + String.valueOf(Integer.parseInt(sonam) - Thongtin_user.Namsinh));
+//            tuoi_hoso.setText("Tuổi: " + String.valueOf(2024 - Thongtin_user.Namsinh));
             gioitinh_hoso.setText("Giới tính: " + Thongtin_user.Gioitinh);
             noio_hoso.setText("Nơi ở: " + Thongtin_user.Noio);
             hocvan_hoso.setText("Trình độ: " + Thongtin_user.Hocvan);
@@ -153,7 +152,6 @@ public class Fragment_canhan extends Fragment {
             mucdichthamgia_hoso.setText("Mục tiêu: " + Thongtin_user.Mucdichthamgia);
             nghenghiep_hoso.setText("Nghề nghiệp: " + Thongtin_user.Nghenghiep);
             ngaythamgia_hoso.setText("Tham gia ngày " + Thongtin_user.Ngaydangky % 100 + "/" + Thongtin_user.Ngaydangky %10000/100 + "/" + Thongtin_user.Ngaydangky /10000);
-            ngaydangnhap_hoso.setText("Đăng nhập lần cuối ngày " + Thongtin_user.Ngaydangxuat % 100 + "/" + Thongtin_user.Ngaydangxuat %10000/100 + "/" + Thongtin_user.Ngaydangxuat /10000);
             gioithieubanthan_hoso.setText(Thongtin_user.Gioithieubanthan);
             Picasso.get().load(Thongtin_user.Anhdaidien).into(avata_hoso);
 
@@ -266,32 +264,6 @@ public class Fragment_canhan extends Fragment {
                     startActivity(intent);
                 }
             });
-
-            Btn_danhsachnguoithich_canhan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), Nguoi_cau_hon.class);
-                    intent.putExtra("guiidnguoichat", USER.getUid());
-                    startActivity(intent);
-                }
-            });
-
-            Btn_nguoiduocauhon_canhan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), Nguoi_duoc_cau_hon.class);
-                    startActivity(intent);
-                }
-            });
-
-            Btn_bimat_canhan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), Bi_mat_them.class);
-                    startActivity(intent);
-                }
-            });
-
         }
     }
 
@@ -302,7 +274,6 @@ public class Fragment_canhan extends Fragment {
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
-        Btn_bimat_canhan = view.findViewById(R.id.Btn_bimat_canhan);
         Btn_dangxuat_canhan = view.findViewById(R.id.dangxuat_canhan);
         Btn_dangnhap_canhan = view.findViewById(R.id.Btn_dangnhap_canhan);
         Btn_dangky_canhan = view.findViewById(R.id.Btn_dangky_canhan);
@@ -310,8 +281,6 @@ public class Fragment_canhan extends Fragment {
         Btn_doianhdaidien = view.findViewById(R.id.doianhdaidien_canhan);
         Btn_suahoso = view.findViewById(R.id.suahoso_canhan);
         Btn_tangdangcap_canhan = view.findViewById(R.id.tangdangcap_canhan);
-        Btn_danhsachnguoithich_canhan = view.findViewById(R.id.Btn_danhsachnguoithich_canhan);
-        Btn_nguoiduocauhon_canhan = view.findViewById(R.id.Btn_nguoiduocauhon_canhan);
 
         ten_hoso = view.findViewById(R.id.ten_canhan);
         tuoi_hoso = view.findViewById(R.id.tuoi_canhan);
@@ -322,15 +291,12 @@ public class Fragment_canhan extends Fragment {
         mucdichthamgia_hoso = view.findViewById(R.id.mucdich_canhan);
         nghenghiep_hoso = view.findViewById(R.id.nghenghiep_canhan);
         ngaythamgia_hoso = view.findViewById(R.id.ngaythamgia_canhan);
-        ngaydangnhap_hoso = view.findViewById(R.id.ngaydangnhap_canhan);
         gioithieubanthan_hoso = view.findViewById(R.id.gioithieubanthan_canhan);
         phanhoso = view.findViewById(R.id.Layout_canhan);
         avata_hoso = view.findViewById(R.id.avata_canhan);
         LinearLayuot_denghidangnhap = view.findViewById(R.id.LinearLayuot_denghidangnhap);
         Txt_nguoithich_canhan = view.findViewById(R.id.Txt_nguoithich_canhan);
         Txt_dangcap_canhan = view.findViewById(R.id.Txt_dangcap_canhan);
-        Txt_nguoidathich_canhan = view.findViewById(R.id.Txt_nguoidathich_canhan);
-        Img_sao_canhan = view.findViewById(R.id.Img_sao_canhan);
 
         Txt_sotien_dangcap_canhan = view.findViewById(R.id.Txt_sotien_dangcap_canhan);
         sovang = Thongtin_user.Vang;

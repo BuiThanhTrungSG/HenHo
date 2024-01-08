@@ -37,7 +37,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -45,7 +44,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.love.henho.Adapter.Thanhvienmoidangnhap_adapter;
-import com.love.henho.BuildConfig;
 import com.love.henho.Dang_nhap;
 import com.love.henho.Hen_gap;
 import com.love.henho.Ho_so;
@@ -59,6 +57,7 @@ import com.love.henho.R;
 import com.love.henho.Tang_dang_cap;
 import com.love.henho.Thue_muon;
 import com.love.henho.Tim_quanh_day;
+import com.squareup.picasso.BuildConfig;
 import com.squareup.picasso.Picasso;
 
 import java.lang.reflect.Type;
@@ -68,9 +67,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class Fragment_trangchu extends Fragment implements OnItemClickListener_trangchu {
@@ -156,7 +153,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
         spLuu = sp.edit();
         gson = new Gson();
 
-        kiemtraphienban();
+//        kiemtraphienban();
 
         hienthiloichaoadmin();
 

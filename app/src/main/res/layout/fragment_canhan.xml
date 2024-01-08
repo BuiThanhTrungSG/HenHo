@@ -32,48 +32,33 @@
             android:id="@+id/contran_tren_canhan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/Img_sao_canhan"
-                android:layout_width="150dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/icon_sao0"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/avata_canhan" />
-
-            <ImageView
                 android:id="@+id/avata_canhan"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="10dp"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
                 android:src="@drawable/logo"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Img_sao_canhan"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/doianhdaidien_canhan"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-                android:layout_width="150dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
                 android:text="Đổi ảnh đại diện"
-                android:textSize="11sp"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/avata_canhan"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/avata_canhan" />
 
             <TextView
                 android:id="@+id/ten_canhan"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:gravity="center"
                 android:text="Tên"
                 android:textColor="#0492A5"
                 android:textSize="16sp"
@@ -83,155 +68,78 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/phannuthoso_canhan"
+                android:id="@+id/linearLayout4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="horizontal"
-                android:weightSum="9"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/avata_canhan"
                 app:layout_constraintTop_toBottomOf="@+id/ten_canhan">
 
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/tuoi_canhan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:text="Tuoi"
+                    android:textColor="#3F51B5" />
 
-                    <ImageView
-                        android:id="@+id/suahoso_canhan"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:clickable="true"
-                        android:background="@drawable/icon_suahoso" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"
-                        android:text="Sửa thông tin"
-                        android:textSize="10sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/gioitinh_canhan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="2dp"
+                    android:text="giới tính"
+                    android:textColor="#3F51B5" />
 
-                    <ImageView
-                        android:id="@+id/doimatkhau_canhan"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:clickable="true"
-                        android:background="@drawable/icon_doimatkhau" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Đổi mật khẩu"
-                        android:textSize="10sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/noio_canhan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="2dp"
+                    android:text="nơi ở"
+                    android:textColor="#3F51B5" />
 
-                    <ImageView
-                        android:id="@+id/dangxuat_canhan"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:clickable="true"
-                        android:background="@drawable/icon_dangxuat" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"
-                        android:text="Đăng xuất"
-                        android:textSize="10sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/phannuthoso2_canhan"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:gravity="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/avata_canhan"
-                app:layout_constraintTop_toBottomOf="@+id/phannuthoso_canhan">
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/hocvan_canhan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="2dp"
+                    android:text="học vấn"
+                    android:textColor="#3F51B5" />
 
-                    <ImageView
-                        android:id="@+id/Btn_bimat_canhan"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:layout_marginBottom="5dp"
-                        android:clickable="true"
-                        android:src="@drawable/icon_bimat" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Ảnh bí mật"
-                        android:textSize="10sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/nghenghiep_canhan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="2dp"
+                    android:text="nghề nghiệp"
+                    android:textColor="#3F51B5" />
 
-                    <ImageView
-                        android:id="@+id/tangdangcap_canhan"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/icon_thoivang"
-                        android:layout_marginBottom="5dp"
-                        android:clickable="true" />
+                <TextView
+                    android:id="@+id/tinhtranghonnhan_canhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="tình trạng hôn nhân"
+                    android:textColor="#3F51B5" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Lấy vàng"
-                        android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/mucdich_canhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="mục đích tham gia"
+                    android:textColor="#3F51B5" />
 
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/ngaythamgia_canhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ngày tham gia"
+                    android:textColor="#3F51B5" />
 
             </LinearLayout>
 
@@ -241,41 +149,95 @@
             android:id="@+id/layuot_dangcap_canhan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#DCE2F5F8"
             android:layout_margin="10dp"
+            android:background="#DCE2F5F8"
+            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contran_tren_canhan">
 
             <LinearLayout
+                android:id="@+id/Line_giua2_canhan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/Txt_nguoithich1_canhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số người thích bạn: "
+                    android:textColor="#3F51B5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Img_iconthich_canhan" />
+
+                <TextView
+                    android:id="@+id/Txt_nguoithich_canhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textColor="#ff00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/Txt_nguoithich1_canhan"
+                    app:layout_constraintTop_toBottomOf="@+id/Img_iconthich_canhan" />
+
+                <ImageView
+                    android:id="@+id/Img_iconthich_canhan"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_like"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/Line_giua1_canhan"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
                 android:background="#FFFFFF"
-                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Line_giua2_canhan">
 
                 <TextView
                     android:id="@+id/Txt_vang1_canhan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:text="Số vàng bạn đang có"
-                    android:textColor="#3F51B5"/>
+                    android:text="Số vàng đang có"
+                    android:textColor="#3F51B5" />
 
                 <TextView
                     android:id="@+id/Txt_sotien_dangcap_canhan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
                     android:layout_marginEnd="10dp"
+                    android:text="100"
+                    android:textColor="#FF9800"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#F44336" />
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Txt_dangcapchu_canhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Đẳng cấp: "
+                    android:textColor="#3F51B5" />
 
                 <TextView
                     android:id="@+id/Txt_dangcap_canhan"
@@ -283,245 +245,143 @@
                     android:layout_height="wrap_content"
                     android:text="Bình dân"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/Line_giua2_canhan"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp"
-                android:weightSum="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Line_giua1_canhan">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/Img_iconthich_canhan"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/icon_like"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                    <TextView
-                        android:id="@+id/Txt_nguoithich1_canhan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Số người thích bạn: "
-                        android:textColor="#3F51B5"
-                        app:layout_constraintTop_toBottomOf="@+id/Img_iconthich_canhan"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/Txt_nguoithich_canhan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="9"
-                        android:textColor="#ff00"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        app:layout_constraintTop_toBottomOf="@+id/Img_iconthich_canhan"
-                        app:layout_constraintStart_toEndOf="@+id/Txt_nguoithich1_canhan" />
-
-                    <Button
-                        android:id="@+id/Btn_danhsachnguoithich_canhan"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#8F01B3A2"
-                        app:strokeWidth="2dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Danh sách"
-                        android:textColor="#009688"
-                        android:textSize="12sp"
-                        app:layout_constraintTop_toBottomOf="@+id/Txt_nguoithich_canhan"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/Img_icondathich_canhan"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/icon_unlike"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                    <TextView
-                        android:id="@+id/Txt_nguoithich2_canhan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Số người bạn thích: "
-                        android:textColor="#3F51B5"
-                        app:layout_constraintTop_toBottomOf="@+id/Img_icondathich_canhan"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/Txt_nguoidathich_canhan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="10"
-                        android:textColor="#9673D5"
-                        android:textStyle="bold"
-                        android:textSize="15sp"/>
-
-                    <Button
-                        android:id="@+id/Btn_nguoiduocauhon_canhan"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#8F01B3A2"
-                        app:strokeWidth="2dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Danh sách"
-                        android:textColor="#009688"
-                        android:textSize="12sp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_thongtin_canhan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="horizontal"
-            android:weightSum="10"
-            android:background="#DCE2F5F8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layuot_dangcap_canhan">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tuoi_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="Tuoi" />
-
-                <TextView
-                    android:id="@+id/gioitinh_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="giới tính" />
-
-                <TextView
-                    android:id="@+id/noio_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="nơi ở" />
-
-                <TextView
-                    android:id="@+id/hocvan_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="học vấn" />
-
-                <TextView
-                    android:id="@+id/nghenghiep_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="nghề nghiệp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="5"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tinhtranghonnhan_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="tình trạng hôn nhân" />
-
-                <TextView
-                    android:id="@+id/mucdich_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="mục đích tham gia" />
-
-                <TextView
-                    android:id="@+id/ngaythamgia_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="ngày tham gia" />
-
-                <TextView
-                    android:id="@+id/ngaydangnhap_canhan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#3F51B5"
-                    android:text="ngày đăng nhập" />
-            </LinearLayout>
-
-        </LinearLayout>
 
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Liner_hangcuoi_canhan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_thongtin_canhan">
+            app:layout_constraintTop_toBottomOf="@+id/layuot_dangcap_canhan">
 
             <TextView
                 android:id="@+id/gioithieubanthan_canhan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
                 android:text="Giới thiệu bản thân"
                 android:textColor="#3F51B5"
                 android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/Admin_control"
+                android:background="#DCE2F5F8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textviewgioithieu_canhan" />
+
         </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/Liner_hangcuoi_canhan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tangdangcap_canhan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/icon_thoivang"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lấy vàng"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/doimatkhau_canhan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/icon_doimatkhau"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đổi mật khẩu"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/ten_canhan">
+
+                <ImageView
+                    android:id="@+id/suahoso_canhan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/icon_suahoso"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sửa thông tin"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/dangxuat_canhan"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/icon_dangxuat"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng xuất"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -535,7 +395,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"

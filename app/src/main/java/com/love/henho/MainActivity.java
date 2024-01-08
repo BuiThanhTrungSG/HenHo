@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
         mData = FirebaseDatabase.getInstance().getReference();
         db = FirebaseFirestore.getInstance();
 
-        if (User == null){
+        if (User != null){
             db.collection("USER").document(User.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements MaxAdListener {
                     }
                 }
             });
-
         }
 
         // tạo menu

@@ -269,14 +269,14 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="2dp"
-            android:paddingLeft="5dp"
+            android:padding="5dp"
             android:layout_weight="5"
             android:background="#DCE2F5F8">
 
             <ImageView
                 android:id="@+id/Img_icontuoi_hoso"
-                android:layout_width="30dp"
-                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
                 android:src="@drawable/t_dau"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -305,6 +305,7 @@
                 android:id="@+id/camtinh_hoso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textColor="#016E64"
                 android:text="Cầm tinh con gà"
                 app:layout_constraintStart_toEndOf="@+id/Img_icontuoi_hoso"
@@ -314,6 +315,7 @@
                 android:id="@+id/tieugioitinh_hoso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textColor="#016E64"
                 android:textStyle="bold"
                 android:text="Giới tính: "
@@ -328,12 +330,13 @@
                 android:text="Nam"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tieugioitinh_hoso"
-                app:layout_constraintTop_toBottomOf="@+id/Img_icontuoi_hoso" />
+                app:layout_constraintTop_toTopOf="@+id/tieugioitinh_hoso"/>
 
             <TextView
                 android:id="@+id/tieudenoio_hoso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textStyle="bold"
                 android:textColor="#016E64"
                 android:text="Nơi ở: "
@@ -348,7 +351,7 @@
                 android:text="nơi ở"
                 app:layout_constraintStart_toEndOf="@+id/tieudenoio_hoso"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gioitinh_hoso"/>
+                app:layout_constraintTop_toTopOf="@+id/tieudenoio_hoso"/>
 
             <TextView
                 android:id="@+id/tieudehocvan_hoso"
@@ -356,6 +359,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#016E64"
+                android:layout_marginTop="5dp"
                 android:text="Học vấn: "
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/noio_hoso"/>
@@ -368,12 +372,13 @@
                 android:text="học vấn"
                 app:layout_constraintStart_toEndOf="@+id/tieudehocvan_hoso"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/noio_hoso"/>
+                app:layout_constraintTop_toTopOf="@+id/tieudehocvan_hoso"/>
 
             <TextView
                 android:id="@+id/tieudenguoicauhon_hoso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textColor="#016E64"
                 android:textStyle="bold"
                 android:text="Số người thích: "
@@ -388,30 +393,14 @@
                 android:text="0"
                 app:layout_constraintStart_toEndOf="@+id/tieudenguoicauhon_hoso"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hocvan_hoso"/>
-
-            <Button
-                android:id="@+id/Btn_nguoicauhon_hoso"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:strokeColor="#8F01B3A2"
-                app:strokeWidth="2dp"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:textSize="12sp"
-                android:text="Xem danh sách"
-                android:layout_marginEnd="5dp"
-                android:textColor="#009688"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Txt_songuoicauhon_hoso"/>
+                app:layout_constraintTop_toTopOf="@+id/tieudenguoicauhon_hoso"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:paddingLeft="5dp"
+            android:padding="5dp"
             android:layout_weight="5"
             android:background="#DCE2F5F8">
 

@@ -57,7 +57,7 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
     String sohoso;
     Integer sonam;
     ImageView Btn_bimat_hoso, Img_sao_hoso, Btn_thich, avata_hoso, Img_icontuoi_hoso, Btn_guitinnhan;
-    Button Btn_nguoicauhon_hoso, Btn_quaylai_hoso;
+    Button Btn_quaylai_hoso;
     TextView camtinh_hoso, Txt_sothoivang_hoso, Txt_songuoicauhon_hoso, Txt_thich, ten_hoso, dangcap_hoso, tuoi_hoso, gioitinh_hoso, noio_hoso, hocvan_hoso, tinhtranghonnhan_hoso, mucdichthamgia_hoso, nghenghiep_hoso, ngaythamgia_hoso, gioithieubanthan_hoso;
     LinearLayout phanguitinnhanvathich_hoso;
     Integer sovang_hoso;
@@ -188,11 +188,6 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
                 }
 
                 Txt_songuoicauhon_hoso.setText(String.valueOf(layve.getSonguoithich()));
-                if(layve.getSonguoithich() == 0){
-                    Btn_nguoicauhon_hoso.setVisibility(View.INVISIBLE);
-                }else {
-                    Btn_nguoicauhon_hoso.setVisibility(View.VISIBLE);
-                }
 
                 sovang_hoso = layve.getVang();
                 Txt_sothoivang_hoso.setText("Đang có " + sovang_hoso + " thỏi vàng");
@@ -255,15 +250,6 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
                 } else {
                     Toast.makeText(Ho_so.this, "Bạn chưa đăng nhập nên chưa được thích", Toast.LENGTH_LONG).show();
                 }
-            }
-        });
-
-        Btn_nguoicauhon_hoso.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Nguoi_cau_hon.class);
-                intent.putExtra("guiidnguoichat", sohoso);
-                startActivity(intent);
             }
         });
 
@@ -418,7 +404,6 @@ public class Ho_so extends AppCompatActivity implements MaxAdListener {
         Img_sao_hoso = findViewById(R.id.Img_sao_hoso);
         Btn_guitinnhan = findViewById(R.id.guitinnhan_hoso);
         Btn_thich = findViewById(R.id.thich_hoso);
-        Btn_nguoicauhon_hoso = findViewById(R.id.Btn_nguoicauhon_hoso);
         Btn_quaylai_hoso = findViewById(R.id.Btn_quaylai_hoso);
         Txt_thich = findViewById(R.id.tieudethich_hoso);
         Img_icontuoi_hoso = findViewById(R.id.Img_icontuoi_hoso);
