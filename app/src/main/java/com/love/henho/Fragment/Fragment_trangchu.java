@@ -115,43 +115,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
     @Override
     public void onViewCreated(@NonNull View view, @Nullable final Bundle savedInstanceState) {
 
-
-        Sophienban_khuyenkhich = BuildConfig.VERSION_CODE;
-        Sophienban_chan = BuildConfig.VERSION_CODE;
-
-        RecyclerView_danhsachmoidangnhap_fragment_trangchu = view.findViewById(R.id.RecyclerView_danhsachmoidangnhap_fragment_trangchu);
-        mAuth = FirebaseAuth.getInstance();
-        User = mAuth.getCurrentUser();
-        mData = FirebaseDatabase.getInstance().getReference();
-        db = FirebaseFirestore.getInstance();
-
-        Btn_timkiem_trangchu = view.findViewById(R.id.Btn_timkiem_trangchu);
-        Btn_timkiemthanhvien_trangchu = view.findViewById(R.id.Btn_timkiemthanhvien_trangchu);
-        Btn_timquanhday_trangchu = view.findViewById(R.id.Btn_timquanhday_trangchu);
-        Btn_tangvang_trangchu = view.findViewById(R.id.Btn_tangvang_trangchu);
-        Btn_huytimkiemthanhvien_trangchu = view.findViewById(R.id.Btn_huytimkiemthanhvien_trangchu);
-        Btn_hengap_trangchu = view.findViewById(R.id.Btn_hengap_trangchu);
-        Btn_quaylai_trangchu = view.findViewById(R.id.Btn_quaylai_trangchu);
-        Btn_phongchat_trangchu = view.findViewById(R.id.Btn_phongchat_trangchu);
-        Btn_hoptuoi_trangchu = view.findViewById(R.id.Btn_boitinhyeu_trangchu);
-        Btn_nguoila_trangchu = view.findViewById(R.id.Btn_nguoila_trangchu);
-        Btn_thuemuon_trangchu = view.findViewById(R.id.Btn_thuemuon_trangchu);
-        Btn_dong_quangcao = view.findViewById(R.id.Btn_dong_quangcao);
-        Layuotphu1_timkiem_trangchu = view.findViewById(R.id.Layuotphu1_timkiem_trangchu);
-        Constran_quangcao = view.findViewById(R.id.Constran_quangcao);
-        ds_menu_trangchu = view.findViewById(R.id.ds_menu_trangchu);
-        spinner_mucdichthamgia_timkiem_trangchu = view.findViewById(R.id.muctieu_timkiem_trangchu);
-        spinner_gioitinh_timkiem_trangchu = view.findViewById(R.id.spinner_gioitinh_timkiem_trangchu);
-        spinner_noio_timkiem_trangchu = view.findViewById(R.id.spinner_noio_timkiem_trangchu);
-        spinner_dangcap_timkiem_trangchu = view.findViewById(R.id.spinner_dangcap_timkiem_trangchu);
-        muctieu_timkiem_trangchu = view.findViewById(R.id.muctieu_timkiem_trangchu);
-        Txt_danhsachthanhvien_trangchu = view.findViewById(R.id.Txt_danhsachthanhvien_trangchu);
-        Img_anh_quangcao = view.findViewById(R.id.Img_anh_quangcao);
-
-        mLay = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        spLuu = sp.edit();
-        gson = new Gson();
+        anhXa(view);
 
 //        kiemtraphienban();
 
@@ -415,6 +379,46 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
         });
     }
 
+    private void anhXa(View view) {
+
+        Sophienban_khuyenkhich = BuildConfig.VERSION_CODE;
+        Sophienban_chan = BuildConfig.VERSION_CODE;
+
+        RecyclerView_danhsachmoidangnhap_fragment_trangchu = view.findViewById(R.id.RecyclerView_danhsachmoidangnhap_fragment_trangchu);
+        mAuth = FirebaseAuth.getInstance();
+        User = mAuth.getCurrentUser();
+        mData = FirebaseDatabase.getInstance().getReference();
+        db = FirebaseFirestore.getInstance();
+
+        Btn_timkiem_trangchu = view.findViewById(R.id.Btn_timkiem_trangchu);
+        Btn_timkiemthanhvien_trangchu = view.findViewById(R.id.Btn_timkiemthanhvien_trangchu);
+        Btn_timquanhday_trangchu = view.findViewById(R.id.Btn_timquanhday_trangchu);
+        Btn_tangvang_trangchu = view.findViewById(R.id.Btn_tangvang_trangchu);
+        Btn_huytimkiemthanhvien_trangchu = view.findViewById(R.id.Btn_huytimkiemthanhvien_trangchu);
+        Btn_hengap_trangchu = view.findViewById(R.id.Btn_hengap_trangchu);
+        Btn_quaylai_trangchu = view.findViewById(R.id.Btn_quaylai_trangchu);
+        Btn_phongchat_trangchu = view.findViewById(R.id.Btn_phongchat_trangchu);
+        Btn_hoptuoi_trangchu = view.findViewById(R.id.Btn_boitinhyeu_trangchu);
+        Btn_nguoila_trangchu = view.findViewById(R.id.Btn_nguoila_trangchu);
+        Btn_thuemuon_trangchu = view.findViewById(R.id.Btn_thuemuon_trangchu);
+        Btn_dong_quangcao = view.findViewById(R.id.Btn_dong_quangcao);
+        Layuotphu1_timkiem_trangchu = view.findViewById(R.id.Layuotphu1_timkiem_trangchu);
+        Constran_quangcao = view.findViewById(R.id.Constran_quangcao);
+        ds_menu_trangchu = view.findViewById(R.id.ds_menu_trangchu);
+        spinner_mucdichthamgia_timkiem_trangchu = view.findViewById(R.id.muctieu_timkiem_trangchu);
+        spinner_gioitinh_timkiem_trangchu = view.findViewById(R.id.spinner_gioitinh_timkiem_trangchu);
+        spinner_noio_timkiem_trangchu = view.findViewById(R.id.spinner_noio_timkiem_trangchu);
+        spinner_dangcap_timkiem_trangchu = view.findViewById(R.id.spinner_dangcap_timkiem_trangchu);
+        muctieu_timkiem_trangchu = view.findViewById(R.id.muctieu_timkiem_trangchu);
+        Txt_danhsachthanhvien_trangchu = view.findViewById(R.id.Txt_danhsachthanhvien_trangchu);
+        Img_anh_quangcao = view.findViewById(R.id.Img_anh_quangcao);
+
+        mLay = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        spLuu = sp.edit();
+        gson = new Gson();
+    }
+
     private void LayThongTinChon() {
         Loc_mucdichthamgia = spinner_mucdichthamgia_timkiem_trangchu.getSelectedItem().toString();
         Loc_gioitinh = spinner_gioitinh_timkiem_trangchu.getSelectedItem().toString();
@@ -459,9 +463,8 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
     private void daylendaudanhsach() {
         if (User != null) {
             // lấy ngày hiện tại
-            DateFormat dinhdangngaythangnam = new SimpleDateFormat("MMdd");
+            @SuppressLint("SimpleDateFormat") DateFormat dinhdangngaythangnam = new SimpleDateFormat("yyyyMMdd");
             Integer songaythangnam_suahoso = Integer.parseInt(dinhdangngaythangnam.format(Calendar.getInstance().getTime()));
-            mData.child("USERS").child(User.getUid()).child("ngaydangxuat").setValue(songaythangnam_suahoso);
             FirebaseFirestore.getInstance().collection("USER").document(User.getUid()).update("ngaydangxuat", songaythangnam_suahoso);
             // lấy ngày hiện tại xong
         }
@@ -743,6 +746,7 @@ public class Fragment_trangchu extends Fragment implements OnItemClickListener_t
             }
         });
     }
+
     private void Docdanhsachtrenmang_taithem() {
 
         Toast.makeText(getActivity(), "Tải thêm nè", Toast.LENGTH_SHORT).show();
